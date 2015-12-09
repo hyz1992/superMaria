@@ -1,5 +1,125 @@
 [LUA-print] cccccccccccccccccccccc
 
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: config.luac
+
+crycpo acc  0 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/init.luac
+
+crycpo acc  1 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/Cocos2d.luac
+
+crycpo acc  2 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/Cocos2dConstants.luac
+
+crycpo acc  3 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/functions.luac
+
+crycpo acc  4 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/Opengl.luac
+
+crycpo acc  5 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/OpenglConstants.luac
+
+crycpo acc  6 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocosdenshion/AudioEngine.luac
+
+crycpo acc  7 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocostudio/CocoStudio.luac
+
+crycpo acc  8 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/json.luac
+
+crycpo acc  9 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocostudio/StudioConstants.luac
+
+crycpo acc  10 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/ui/GuiConstants.luac
+
+crycpo acc  11 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/ui/experimentalUIConstants.luac
+
+crycpo acc  12 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/extension/ExtensionConstants.luac
+
+crycpo acc  13 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/network/NetworkConstants.luac
+
+crycpo acc  14 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/spine/SpineConstants.luac
+
+crycpo acc  15 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/deprecated.luac
+
+crycpo acc  16 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/DrawPrimitives.luac
+
+crycpo acc  17 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/bitExtend.luac
+
+crycpo acc  18 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/DeprecatedCocos2dClass.luac
+
+crycpo acc  19 
+
 [LUA-print] 
 ********** 
 CCProgressTo was deprecated please use cc.ProgressTo instead.
@@ -1097,10 +1217,34 @@ cc.EGLView was deprecated please use cc.GLView instead.
 cc.ShaderCache was deprecated please use cc.GLProgramCache instead.
 **********
 
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/DeprecatedCocos2dEnum.luac
+
+crycpo acc  20 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/DeprecatedCocos2dFunc.luac
+
+crycpo acc  21 
+
 [LUA-print] 
 ********** 
 CCDrawPrimitives was deprecated please use cc.DrawPrimitives instead.
 **********
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocos2d/DeprecatedOpenglEnum.luac
+
+crycpo acc  22 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocostudio/DeprecatedCocoStudioClass.luac
+
+crycpo acc  23 
 
 [LUA-print] 
 ********** 
@@ -1287,6 +1431,18 @@ UIRootWidget was deprecated please use ccs.UIRootWidget instead.
 ActionObject was deprecated please use ccs.ActionObject instead.
 **********
 
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocostudio/DeprecatedCocoStudioFunc.luac
+
+crycpo acc  24 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocosbuilder/DeprecatedCocosBuilderClass.luac
+
+crycpo acc  25 
+
 [LUA-print] 
 ********** 
 CCBReader was deprecated please use cc.BReader instead.
@@ -1302,10 +1458,28 @@ CCBAnimationManager was deprecated please use cc.BAnimationManager instead.
 CCBProxy was deprecated please use cc.CCBProxy instead.
 **********
 
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocosdenshion/DeprecatedCocosDenshionClass.luac
+
+crycpo acc  26 
+
 [LUA-print] 
 ********** 
 SimpleAudioEngine was deprecated please use cc.SimpleAudioEngine instead.
 **********
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocosdenshion/DeprecatedCocosDenshionFunc.luac
+
+crycpo acc  27 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/extension/DeprecatedExtensionClass.luac
+
+crycpo acc  28 
 
 [LUA-print] 
 ********** 
@@ -1382,10 +1556,70 @@ CCScale9Sprite was deprecated please use ccui.Scale9Sprite instead.
 cc.Scale9Sprite was deprecated please use ccui.Scale9Sprite instead.
 **********
 
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/extension/DeprecatedExtensionEnum.luac
+
+crycpo acc  29 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/extension/DeprecatedExtensionFunc.luac
+
+crycpo acc  30 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/network/DeprecatedNetworkClass.luac
+
+crycpo acc  31 
+
 [LUA-print] 
 ********** 
 WebSocket was deprecated please use cc.WebSocket instead.
 **********
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/network/DeprecatedNetworkEnum.luac
+
+crycpo acc  32 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/network/DeprecatedNetworkFunc.luac
+
+crycpo acc  33 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/ui/DeprecatedUIEnum.luac
+
+crycpo acc  34 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/ui/DeprecatedUIFunc.luac
+
+crycpo acc  35 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/cocosbuilder/CCBReaderLoad.luac
+
+crycpo acc  36 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/physics3d/physics3d-constants.luac
+
+crycpo acc  37 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/init.luac
+
+crycpo acc  38 
 
 [LUA-print] [INFO] 
 
@@ -1393,19 +1627,31 @@ WebSocket was deprecated please use cc.WebSocket instead.
 
 [LUA-print] [INFO] #
 
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/device.luac
+
+crycpo acc  39 
+
 [LUA-print] [INFO] # device.platform              = windows
 
 [LUA-print] [INFO] # device.model                 = unknown
 
 [LUA-print] [INFO] # device.language              = cn
 
-[LUA-print] [INFO] # device.writablePath          = C:/Users/Administrator/AppData/Local/luatest/
+[LUA-print] [INFO] # device.writablePath          = C:/Users/Administrator/AppData/Local/cjml/
 
 [LUA-print] [INFO] # device.directorySeparator    = \
 
 [LUA-print] [INFO] # device.pathSeparator         = ;
 
 [LUA-print] [INFO] #
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/display.luac
+
+crycpo acc  40 
 
 [LUA-print] [INFO] # design resolution size       = {width = 864.00, height = 576.00}
 
@@ -1461,7 +1707,199 @@ WebSocket was deprecated please use cc.WebSocket instead.
 
 [LUA-print] [INFO] #
 
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/audio.luac
+
+crycpo acc  41 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/transition.luac
+
+crycpo acc  42 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/NodeEx.luac
+
+crycpo acc  43 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/SpriteEx.luac
+
+crycpo acc  44 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/LayerEx.luac
+
+crycpo acc  45 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/MenuEx.luac
+
+crycpo acc  46 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UIWidget.luac
+
+crycpo acc  47 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UICheckBox.luac
+
+crycpo acc  48 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UIEditBox.luac
+
+crycpo acc  49 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UIListView.luac
+
+crycpo acc  50 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UIPageView.luac
+
+crycpo acc  51 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UIScrollView.luac
+
+crycpo acc  52 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UISlider.luac
+
+crycpo acc  53 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/extends/UITextField.luac
+
+crycpo acc  54 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/package_support.luac
+
+crycpo acc  55 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: cocos/framework/components/event.luac
+
+crycpo acc  56 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/MyInit.luac
+
+crycpo acc  57 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/utils/globalFunc.luac
+
+crycpo acc  58 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/framework/init.luac
+
+crycpo acc  59 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/framework/Registry.luac
+
+crycpo acc  60 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/framework/GameObject.luac
+
+crycpo acc  61 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/framework/EventProxy.luac
+
+crycpo acc  62 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/framework/components/Component.luac
+
+crycpo acc  63 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/framework/components/behavior/StateMachine.luac
+
+crycpo acc  64 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/framework/components/behavior/EventProtocol.luac
+
+crycpo acc  65 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/scene/gameLayer.luac
+
+crycpo acc  66 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/entity/mariaMap.luac
+
+crycpo acc  67 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/entity/mariaAI.luac
+
+crycpo acc  68 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: packages/mvc/init.luac
+
+crycpo acc  69 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: packages/mvc/AppBase.luac
+
+crycpo acc  70 
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: packages/mvc/ViewBase.luac
+
+crycpo acc  71 
+
 [LUA-print] [INFO] cc.load() - load module "packages.mvc.init"
+
+cocos2dx_lua_loader,searthpath: ;.\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?.lua;D:\projects\cjml\superMaria\workSpace\lua\?\init.lua;;D:\softWareInstall\Lua5.1\lua\?.luac
+
+cocos2dx_lua_loader,chunkName: app/MyApp.luac
+
+crycpo acc  72 
 
 [LUA-print] dump from: [string "packages/mvc/AppBase.lua"]:23: in function 'ctor'
 
@@ -1491,591 +1929,3205 @@ WebSocket was deprecated please use cc.WebSocket instead.
 
 [LUA-print] ["width"] = 400,
 
-[LUA-print] ---------向下：-----
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] ["y"] = 160,
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:588: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
 
-[LUA-print] ["x"] = 109,
+[LUA-print] traceback----------------traceback---------------printEnd
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	109
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	109.59999847412
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	110.29999542236
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	111.09999847412
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	112
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	113
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	114.09999847412
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	115.29999542236
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	116.59999847412
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	118
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	119.5
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	121.09999847412
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	122.79999542236
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	124.59999847412
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	126.5
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	128.5
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	130.59999847412
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	132.79999542236
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	135.09999847412
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	137.5
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	140
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	142.60000610352
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	145.30000305176
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	148.10000610352
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	151
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	154
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	157
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	160
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	163
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	166
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	169
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	172
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	175
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	178
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	181
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	184
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	187
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	190
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	193
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	196
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	199
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	202
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	205
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	208
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	211
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	214
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	217
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	220
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	223
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	226
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	229
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	232
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	235
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	238
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	241
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	244
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	247
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	250
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	253
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	256
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	259
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	262
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	265
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	268
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	271
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	274
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	277
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	280
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	283
 
-[LUA-print] ["x"] = 109,
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
 
-[LUA-print] 地图坐标  	0
+[LUA-print] traceback----------------traceback---------------printEnd
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	286
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	289
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	292
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	295
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	298
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	301
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	304
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	307
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	310
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	313
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	316
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	319
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	322
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	325
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	328
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	331
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	334
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	337
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	340
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	343
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	346
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	349
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	352
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	355
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	358
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	361
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	364
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	367
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	370
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	373
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	376
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	379
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	382
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	385
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	388
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	391
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	394
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	397
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	400
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	403
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	406
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	409
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	412
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	415
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	418
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	421
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	424
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	427
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	430
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	433
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	436
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	439
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	442
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	445
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	448
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	451
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	454
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	457
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	460
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	463
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	466
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	469
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	472
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	475
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	478
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	481
 
-[LUA-print] ["y"] = 160,
+[LUA-print] jumpRight
 
-[LUA-print] ["x"] = 109,
+[LUA-print] num: 	15	   mod:  	1
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] =================,	1	467	480
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	480
 
-[LUA-print] ["y"] = 160,
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] ["x"] = 109,
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
 
-[LUA-print] -------------,地图像素
+[LUA-print] traceback----------------traceback---------------printEnd
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	483
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	486
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	489
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	492
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	495
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	498
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	501
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	504
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	507
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	510
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	513
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	516
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	519
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	522
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	525
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	528
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	531
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	534
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	537
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	540
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	543
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	546
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	549
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	552
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	555
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	558
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	561
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	564
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	567
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	570
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	573
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	576
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	579
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	582
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	585
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	588
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	591
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	594
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	597
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	600
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	603
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	606
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	609
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	612
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	615
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	0	玛丽地图坐标x	618
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	-3	玛丽地图坐标x	621
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	-6	玛丽地图坐标x	624
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	-9	玛丽地图坐标x	627
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-12	玛丽地图坐标x	630
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-15	玛丽地图坐标x	633
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	-18	玛丽地图坐标x	636
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	-21	玛丽地图坐标x	639
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-24	玛丽地图坐标x	642
 
-[LUA-print] ["x"] = 109,
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] -------------,地图像素
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
 
-[LUA-print] ["y"] = 35,
+[LUA-print] traceback----------------traceback---------------printEnd
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	-27	玛丽地图坐标x	645
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	-30	玛丽地图坐标x	648
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	-33	玛丽地图坐标x	651
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	-36	玛丽地图坐标x	654
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	-39	玛丽地图坐标x	657
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	-42	玛丽地图坐标x	660
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-45	玛丽地图坐标x	663
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-48	玛丽地图坐标x	666
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	-51	玛丽地图坐标x	669
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	-54	玛丽地图坐标x	672
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-57	玛丽地图坐标x	675
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-60	玛丽地图坐标x	678
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	-63	玛丽地图坐标x	681
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	-66	玛丽地图坐标x	684
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	-69	玛丽地图坐标x	687
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	-72	玛丽地图坐标x	690
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	-75	玛丽地图坐标x	693
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	-78	玛丽地图坐标x	696
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	-81	玛丽地图坐标x	699
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	-84	玛丽地图坐标x	702
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-87	玛丽地图坐标x	705
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-90	玛丽地图坐标x	708
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	-93	玛丽地图坐标x	711
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	-96	玛丽地图坐标x	714
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-99	玛丽地图坐标x	717
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-102	玛丽地图坐标x	720
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	-105	玛丽地图坐标x	723
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	-108	玛丽地图坐标x	726
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	-111	玛丽地图坐标x	729
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	-114	玛丽地图坐标x	732
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	-117	玛丽地图坐标x	735
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	-120	玛丽地图坐标x	738
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	-123	玛丽地图坐标x	741
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	-126	玛丽地图坐标x	744
 
-[LUA-print] ["y"] = 160,
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] ["x"] = 109,
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] traceback----------------traceback---------------printEnd
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	-129	玛丽地图坐标x	747
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-132	玛丽地图坐标x	750
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-135	玛丽地图坐标x	753
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	-138	玛丽地图坐标x	756
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	-141	玛丽地图坐标x	759
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	-144	玛丽地图坐标x	762
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	-147	玛丽地图坐标x	765
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	-150	玛丽地图坐标x	768
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	-153	玛丽地图坐标x	771
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	-156	玛丽地图坐标x	774
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	-159	玛丽地图坐标x	777
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-162	玛丽地图坐标x	780
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-165	玛丽地图坐标x	783
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	-168	玛丽地图坐标x	786
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	-171	玛丽地图坐标x	789
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-174	玛丽地图坐标x	792
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-177	玛丽地图坐标x	795
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	-180	玛丽地图坐标x	798
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	-183	玛丽地图坐标x	801
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	-186	玛丽地图坐标x	804
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	-189	玛丽地图坐标x	807
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	-192	玛丽地图坐标x	810
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	-195	玛丽地图坐标x	813
 
-[LUA-print] ---------------------====111
+[LUA-print] --------地图坐标x	-198	玛丽地图坐标x	816
 
-[LUA-print] ---------向下：-----
+[LUA-print] --------地图坐标x	-201	玛丽地图坐标x	819
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-204	玛丽地图坐标x	822
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-207	玛丽地图坐标x	825
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	-210	玛丽地图坐标x	828
 
-[LUA-print] 地图坐标  	0
+[LUA-print] --------地图坐标x	-213	玛丽地图坐标x	831
 
-[LUA-print] ["y"] = 160,
+[LUA-print] --------地图坐标x	-216	玛丽地图坐标x	834
 
-[LUA-print] ["x"] = 109,
+[LUA-print] --------地图坐标x	-219	玛丽地图坐标x	837
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	-222	玛丽地图坐标x	840
 
-[LUA-print] ["y"] = 35,
+[LUA-print] --------地图坐标x	-225	玛丽地图坐标x	843
 
-[LUA-print] ["x"] = 3,
+[LUA-print] --------地图坐标x	-228	玛丽地图坐标x	846
 
-[LUA-print] ---------------------,地图块
+[LUA-print] --------地图坐标x	-231	玛丽地图坐标x	849
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	-234	玛丽地图坐标x	852
 
-[LUA-print] type_2	3
+[LUA-print] --------地图坐标x	-237	玛丽地图坐标x	855
 
-[LUA-print] ---------------------====111
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] ---------向下：-----
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:620: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
 
-[LUA-print] ["y"] = 160,
+[LUA-print] traceback----------------traceback---------------printEnd
 
-[LUA-print] ["x"] = 109,
+[LUA-print] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~_type: 	5
 
-[LUA-print] -------------,屏幕像素
+[LUA-print] --------地图坐标x	-240	玛丽地图坐标x	858
 
-[LUA-print] 地图坐标  	0
+[LUA-print] jumpRight
 
-[LUA-print] ["y"] = 160,
+[LUA-print] num: 	26	   mod:  	26
 
-[LUA-print] ["x"] = 109,
+[LUA-print] =================,	1	605	858
 
-[LUA-print] -------------,地图像素
+[LUA-print] --------地图坐标x	-240	玛丽地图坐标x	858
 
-[LUA-print] ["y"] = 35,
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] ["x"] = 3,
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
 
-[LUA-print] ---------------------,地图块
+[LUA-print] traceback----------------traceback---------------printEnd
 
-[LUA-print] type_1	3
+[LUA-print] --------地图坐标x	-243	玛丽地图坐标x	861
 
-[LUA-print] type_2	3
+[LUA-print] traceback----------------traceback---------------printBegin
 
-[LUA-print] ---------------------====111
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:620: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:588: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-246	玛丽地图坐标x	864
+
+[LUA-print] --------地图坐标x	-249	玛丽地图坐标x	867
+
+[LUA-print] --------地图坐标x	-252	玛丽地图坐标x	870
+
+[LUA-print] --------地图坐标x	-255	玛丽地图坐标x	873
+
+[LUA-print] --------地图坐标x	-258	玛丽地图坐标x	876
+
+[LUA-print] --------地图坐标x	-261	玛丽地图坐标x	879
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:620: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:588: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-264	玛丽地图坐标x	882
+
+[LUA-print] --------地图坐标x	-267	玛丽地图坐标x	885
+
+[LUA-print] --------地图坐标x	-270	玛丽地图坐标x	888
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:620: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~_type: 	8
+
+[LUA-print] 停下---------------------------------------xx
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:131: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:588: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-273	玛丽地图坐标x	891
+
+[LUA-print] --------地图坐标x	-276	玛丽地图坐标x	894
+
+[LUA-print] --------地图坐标x	-279	玛丽地图坐标x	897
+
+[LUA-print] --------地图坐标x	-282	玛丽地图坐标x	900
+
+[LUA-print] --------地图坐标x	-285	玛丽地图坐标x	903
+
+[LUA-print] --------地图坐标x	-288	玛丽地图坐标x	906
+
+[LUA-print] --------地图坐标x	-291	玛丽地图坐标x	909
+
+[LUA-print] --------地图坐标x	-294	玛丽地图坐标x	912
+
+[LUA-print] --------地图坐标x	-297	玛丽地图坐标x	915
+
+[LUA-print] --------地图坐标x	-300	玛丽地图坐标x	918
+
+[LUA-print] --------地图坐标x	-303	玛丽地图坐标x	921
+
+[LUA-print] --------地图坐标x	-306	玛丽地图坐标x	924
+
+[LUA-print] --------地图坐标x	-309	玛丽地图坐标x	927
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	930
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	2
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] pppppppppppppppppppppppppp---------
+
+[LUA-print] 停下---------------------------------------xx
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:131: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:582: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	902
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	899
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	896
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	893
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	890
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	887
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	884
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	881
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	878
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	875
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	872
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	869
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	866
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	863
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:615: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:588: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	890
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	893
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	896
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	899
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	902
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	905
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	908
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	911
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	914
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	917
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	920
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	923
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	926
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	929
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	1
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] pppppppppppppppppppppppppp---------
+
+[LUA-print] 停下---------------------------------------xx
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:131: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:582: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	902
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	899
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	896
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	893
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	890
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	887
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	884
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	881
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	878
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	875
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	872
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	869
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	866
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	863
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:615: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:588: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	890
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	893
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	896
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	899
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	902
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	905
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	908
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	911
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	914
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	917
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	920
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	923
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	926
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	929
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	1
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] pppppppppppppppppppppppppp---------
+
+[LUA-print] 停下---------------------------------------xx
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:131: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:582: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	902
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	899
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	896
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	893
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	890
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	887
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	884
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	881
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	878
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	875
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	872
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	869
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	866
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	863
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	864
+
+[LUA-print] walkLeft
+
+[LUA-print] =================,	-1	565	864
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:615: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] cccccccccccccccccccccc
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:626: in function 'onKeyReleased'
+	[string "app/scene/gameLayer.lua"]:116: in function <[string "app/scene/gameLayer.lua"]:114>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:588: in function 'onKeyPressed'
+	[string "app/scene/gameLayer.lua"]:111: in function <[string "app/scene/gameLayer.lua"]:106>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	890
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	893
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	896
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	899
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	902
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	905
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	908
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	911
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	914
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	917
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	920
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	923
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	926
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	929
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	1
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:162: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] --------地图坐标x	-312	玛丽地图坐标x	928
+
+[LUA-print] jumpRight
+
+[LUA-print] num: 	29	   mod:  	0
+
+[LUA-print] =================,	1	603	928
+
+[LUA-print] pppppppppppppppppppppppppp---------
+
+[LUA-print] 停下---------------------------------------xx
+
+[LUA-print] traceback----------------traceback---------------printBegin
+
+[LUA-print] stack traceback:
+	[string "app/utils/globalFunc.lua"]:33: in function 'printTraceback'
+	[string "app/entity/mariaAI.lua"]:521: in function 'doEvent'
+	[string "app/entity/mariaAI.lua"]:131: in function <[string "app/entity/mariaAI.lua"]:108>
+
+[LUA-print] traceback----------------traceback---------------printEnd
 

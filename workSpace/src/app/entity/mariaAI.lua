@@ -61,7 +61,7 @@ function mariaAI:onExit()
 end
 
 function mariaAI:playAni(_type)
-	--_type = aniType.fire
+	_type = aniType.standing
 	--print(_type)
 	self.m_mariArmature:stopAllActions()
 	if self.m_mariaType == MariaType.small then
@@ -127,7 +127,7 @@ function mariaAI:update()
     	self:moveH()
     elseif self.m_fsm:getState() == "jumpUp" then
     	if self.isJumpOver then
-    		print("停下---------------------------------------")
+    		print("停下---------------------------------------xx")
     		self:doEvent("goStanding")
     		if isJumpBtnDown then
     			self:doEvent("goJumpUp")
@@ -154,6 +154,7 @@ function mariaAI:update()
     	if self.m_oldCommond == OldCommond.walkRight then
 	    	self:moveH()
 	    else
+	    	print("pppppppppppppppppppppppppp---------")
 	    	self:doEvent("goJumpUp",false)	--跳到空中，中途松开向右按钮
 	    	return
 	    end
@@ -170,7 +171,7 @@ end
 
 function mariaAI:moveV()
 	local y = self:getPtRightDown().y
-	print("down y : ",y,"  vSpeed: ",self.m_vSpeed)
+	--print("down y : ",y,"  vSpeed: ",self.m_vSpeed)
 	local _type,_tilePt = self:ifCollistionV()
 	--print("-------------------当前vSpeed: "..self.m_vSpeed.."  当前y ："..y.."  当前_type: ".._type)
 	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image then
@@ -187,13 +188,16 @@ function mariaAI:moveV()
 			local mapPtY = _map:getPositionY()
 			local _realPtY = _tab[2].y + mapPtY
 			self:setPositionY(_realPtY)
-			print("----------------------------------- vv  ",_tab[2].y)
+			-- print("----------------------------------- vv  ",_tab[2].y,mapPtY)
 		end
 		return
 	end
 	self.isJumpOver = false
 	--print("竖直位移,_type: ".._type)
 	self.m_vSpeed = self.m_vSpeed - ACC_V
+	if self.m_vSpeed<-MAX_V_SPEED then
+		self.m_vSpeed = -MAX_V_SPEED
+	end
 
 	local ptY = self:getPositionY()
 	local _map = self:getParent().m_map
@@ -204,22 +208,26 @@ function mariaAI:moveV()
 		if ptY < display.height / 10 * 7 or mapPtY <=-(mapHeight - display.height) then
 			ptY = ptY + self.m_vSpeed
 			self:setPositionY(ptY)
-			print("1111111111  ",self.m_vSpeed)
+			-- print("1111111111  ",self.m_vSpeed)
 		else
 			mapPtY = mapPtY-self.m_vSpeed
 			_map:setPositionY(mapPtY)
-			print("2222222222  ",self.m_vSpeed)
+			-- print("2222222222  ",self.m_vSpeed,mapPtY)
 		end
 		
 	elseif self.m_vSpeed<0 then
 		if ptY > display.height / 10 * 3 or mapPtY >=0 then
 			ptY = ptY + self.m_vSpeed
 			self:setPositionY(ptY)
-			print("3333333333333  ",self.m_vSpeed)
+			-- print("3333333333333  ",self.m_vSpeed)
 		else
 			mapPtY = mapPtY-self.m_vSpeed
+			if mapPtY>0 then
+				print("重置地图Y坐标为0，"..mapPtY)
+				mapPtY = 0
+			end
 			_map:setPositionY(mapPtY)
-			print("44444444444444  ",self.m_vSpeed)
+			-- print("44444444444444  ",self.m_vSpeed,mapPtY)
 		end
 	end
 
@@ -264,7 +272,7 @@ function mariaAI:adjustOffsetX()
 		end
 		self:setPositionX(ptX)
 	end
-	print("=================,",ptX,realPtX)
+	print("=================,",self.m_direction,ptX,realPtX)
 end
 
 function mariaAI:moveH()
@@ -276,7 +284,8 @@ function mariaAI:moveH()
 	local _type = self:ifCollistionH()
 	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image or _type==TileType.eTile_Bounder then
 		--撞到障碍物时，对横坐标进行微调
-		if self.m_fsm:getState()== "walkLeft" or self.m_fsm:getState()=="walkRight" then
+		print(self.m_fsm:getState())
+		if self.m_fsm:getState()== "walkLeft" or self.m_fsm:getState()=="walkRight" or self.m_fsm:getState()=="jumpLeft" or self.m_fsm:getState()=="jumpRight" then
 			self:adjustOffsetX()
 		end
 		return
@@ -323,7 +332,7 @@ function mariaAI:ifCollistionV(bValue)
 		_bol = (self.m_vSpeed >=0)
 	end
 	if _bol then 		   --向上
-		print("---------向上：-----")
+		-- print("---------向上：-----")
 		pt_1 = self:getPtLeftTop()			--需要检测的有左上和右上边界
 		pt_2 = self:getPtRightTop()
 		pt_1.y = pt_1.y+_offY
@@ -331,10 +340,10 @@ function mariaAI:ifCollistionV(bValue)
 		if pt_1.y>=display.height then				--首先判断是否到了边界
 			return TileType.eTile_Bounder
 		end
-		printTable(pt_2)
-		print("-------------,屏幕像素")
+		-- printTable(pt_2)
+		-- print("-------------,屏幕像素")
 	else 								--向下
-		print("---------向下：-----")
+		-- print("---------向下：-----")
 		pt_1 = self:getPtLeftDown()			--需要检测的有左下和右下边界
 		pt_2 = self:getPtRightDown()
 		pt_1.y = pt_1.y-_offY
@@ -342,16 +351,16 @@ function mariaAI:ifCollistionV(bValue)
 		if pt_1.y<=0 then				--首先判断是否到了边界
 			return TileType.eTile_Bounder
 		end
-		printTable(pt_2)
-		print("-------------,屏幕像素")
+		-- printTable(pt_2)
+		-- print("-------------,屏幕像素")
 	end
 
 	local mapX,mapY = _map:getPosition()
-	print("地图坐标  ",mapY)
+	-- print("地图坐标  ",mapY)
 	pt_1 = cc.p((pt_1.x - mapX),(pt_1.y - mapY))  --得到玛丽在地图上的像素坐标
 	pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
-	printTable(pt_2)
-	print("-------------,地图像素")
+	-- printTable(pt_2)
+	-- print("-------------,地图像素")
 	local _y 
 	if _bol then 
 		_y = 1
@@ -360,20 +369,20 @@ function mariaAI:ifCollistionV(bValue)
 	end
 	pt_1 = _map:positionToTileCoord(pt_1,{x=1,y = _y})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x=-1,y = _y})
-	printTable(pt_2)
-	print("---------------------,地图块")
+	-- printTable(pt_2)
+	-- print("---------------------,地图块")
 	local type_1 = _map:tileTypeforPos(pt_1)		--得到块类型
 	local type_2 = _map:tileTypeforPos(pt_2)
-	print("type_1",type_1)
-	print("type_2",type_2)
+	-- print("type_1",type_1)
+	-- print("type_2",type_2)
 	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image or type_1==TileType.eTile_Land then		--如果阻止前进的东西，则先返回
-		--print("type_1",type_1)
-		print("---------------------====111")
+		-- print("type_1",type_1)
+		-- print("---------------------====111")
 		return type_1,pt_1
 	end
 	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or type_2==TileType.eTile_Monster_image or type_2==TileType.eTile_Land then
-		--print("type_2",type_2)
-		print("---------------------====222")
+		-- print("type_2",type_2)
+		-- print("---------------------====222")
 		return type_2,pt_2
 	end
 
@@ -414,10 +423,11 @@ function mariaAI:ifCollistionH()
 	pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
 	local _x 
 	if _bol then 
-		_y = 1
+		_x = 1
 	else
 		_x = -1
 	end
+	print("--------地图坐标x",mapX,"玛丽地图坐标x",pt_2.x)
 	pt_1 = _map:positionToTileCoord(pt_1,{x = _x,y=-1})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x = _x,y=1})
 	local type_1 = _map:tileTypeforPos(pt_1)		--得到块类型
@@ -508,13 +518,16 @@ function mariaAI:doEvent(event, ...)
 	if event == "goStanding" or event == "goWalkLeft" or event == "goWalkRight" then
 		self.m_vSpeed = 0
 		self.m_oldCommond = OldCommond.standing
+		printTraceback()
 		self.isJumpOver = false
 	end
+	--print("--------",event)
 	if event == "goWalkLeft" or event == "goJumpLeft" then
 		self:changeDirection(MariaDirectionType.left)
 		self.m_oldCommond = OldCommond.walkLeft
 	end
 	if event == "goWalkRight" or event == "goJumpRight" then
+		--printTraceback()
 		self:changeDirection(MariaDirectionType.right)
 		self.m_oldCommond = OldCommond.walkRight
 	end

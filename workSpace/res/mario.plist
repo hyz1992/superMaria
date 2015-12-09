@@ -7,7 +7,7 @@
             <key>mario_1_0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,761},{19,23}}</string>
+                <string>{{2,762},{19,23}}</string>
                 <key>offset</key>
                 <string>{-1,-1}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>mario_1_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,421},{23,25}}</string>
+                <string>{{2,422},{23,25}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>mario_1_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,367},{25,25}}</string>
+                <string>{{2,368},{25,25}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>mario_1_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,446},{21,25}}</string>
+                <string>{{2,447},{21,25}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>mario_1_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,469},{21,25}}</string>
+                <string>{{2,470},{21,25}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>mario_1_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,492},{19,25}}</string>
+                <string>{{2,493},{19,25}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>mario_1_6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,394},{25,25}}</string>
+                <string>{{2,395},{25,25}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +137,7 @@
             <key>mario_2_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,513},{24,48}}</string>
+                <string>{{2,514},{24,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +150,7 @@
             <key>mario_2_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,563},{24,48}}</string>
+                <string>{{2,564},{24,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +163,7 @@
             <key>mario_2_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,832},{22,46}}</string>
+                <string>{{2,833},{22,46}}</string>
                 <key>offset</key>
                 <string>{-1,1}</string>
                 <key>rotated</key>
@@ -176,7 +176,7 @@
             <key>mario_2_6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,295},{26,34}}</string>
+                <string>{{2,296},{26,34}}</string>
                 <key>offset</key>
                 <string>{0,-5}</string>
                 <key>rotated</key>
@@ -202,15 +202,15 @@
             <key>mario_3_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,248},{26,45}}</string>
+                <string>{{2,248},{26,46}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{0,1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,1},{26,45}}</string>
+                <string>{{0,0},{26,46}}</string>
                 <key>sourceSize</key>
-                <string>{26,47}</string>
+                <string>{26,48}</string>
             </dict>
             <key>mario_3_2.png</key>
             <dict>
@@ -228,7 +228,7 @@
             <key>mario_3_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,613},{24,48}}</string>
+                <string>{{2,614},{24,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +241,7 @@
             <key>mario_3_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,713},{24,46}}</string>
+                <string>{{2,714},{24,46}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +254,7 @@
             <key>mario_3_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,782},{22,48}}</string>
+                <string>{{2,783},{22,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -267,7 +267,7 @@
             <key>mario_3_6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,331},{26,34}}</string>
+                <string>{{2,332},{26,34}}</string>
                 <key>offset</key>
                 <string>{0,-6}</string>
                 <key>rotated</key>
@@ -280,7 +280,7 @@
             <key>mario_3_7.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,663},{24,48}}</string>
+                <string>{{2,664},{24,48}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
@@ -298,9 +298,9 @@
             <key>realTextureFileName</key>
             <string>mario.png</string>
             <key>size</key>
-            <string>{30,880}</string>
+            <string>{30,881}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:5f9179b06f1836512fcbfa9e0413ab97:a0bcc92f7a9efece33deed5d3f119b88:854039c26f3a067962c5cc16d967b8ed$</string>
+            <string>$TexturePacker:SmartUpdate:96f6b32ae0cfd69bc99e80c6115e16a2:d2436ad37c71baaab8030a9482cfa36e:854039c26f3a067962c5cc16d967b8ed$</string>
             <key>textureFileName</key>
             <string>mario.png</string>
         </dict>
