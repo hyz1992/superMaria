@@ -1,6 +1,5 @@
 local mariaAI = class("mariaAI",function ( ... )
-	--return display.newNode()
-	local node = display.newSprite("common_Frame9.png")
+	local node = display.newNode()
 	node:setAnchorPoint(0,0)
 	return node
 end)
@@ -29,12 +28,12 @@ OldCommond.walkRight = 2
 
 local isJumpBtnDown = false  --跳跃按钮是否被按下
 
-MAX_V_SPEED = 12  --最大垂直距离
-ACC_V = 0.5
+local MAX_V_SPEED = 12            --最大垂直速度
+local ACC_V = 0.5					--垂直加速度
 
-START_H_SPEED = 0.5
-MAX_H_SPEED = 3
-ACC_H = 0.1
+local START_H_SPEED = 0.5			--水平方向初始速度
+local MAX_H_SPEED = 3				--水平方向最大速度
+local ACC_H = 0.1					--水平方向加速度
 
 function mariaAI:ctor()
 	display.loadSpriteFrames("mario.plist","mario.png")
@@ -44,11 +43,11 @@ function mariaAI:ctor()
 
 	self:changeDirection(MariaDirectionType.right)
 
-	self.m_speed = START_H_SPEED
-	self.m_vSpeed = 0
-	self.m_oldCommond = OldCommond.standing
-	self.isJumpOver = false
-	self.m_mariaType = MariaType.fire
+	self.m_speed = START_H_SPEED				--水平方向速度
+	self.m_vSpeed = 0							--垂直方向速度
+	self.m_oldCommond = OldCommond.standing     --用于判断跳跃过程中的水平前进方向
+	self.isJumpOver = false						--是否跳跃完毕
+	self.m_mariaType = MariaType.fire			--当前玛丽的类型
 
 	self:playAni()
 
@@ -61,7 +60,7 @@ function mariaAI:onExit()
 end
 
 function mariaAI:playAni(_type)
-	_type = aniType.standing
+	--_type = aniType.standing
 	--print(_type)
 	self.m_mariArmature:stopAllActions()
 	if self.m_mariaType == MariaType.small then
@@ -106,7 +105,7 @@ function mariaAI:playAni(_type)
 end
 
 function mariaAI:update()
-	local _type,_tilePt = self:ifCollistionV(-1)
+	local _type,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
 	if _type==TileType.eTile_Ground or _type==TileType.eTile_Pillar or _type==TileType.eTile_Mountain or _type==TileType.eTile_Cloud or _type==TileType.eTile_BackGround then
 		if self.m_fsm:getState() == "standing" then
 			print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~_type: ",_type)
@@ -126,10 +125,9 @@ function mariaAI:update()
     elseif self.m_fsm:getState() == "walkRight" then
     	self:moveH()
     elseif self.m_fsm:getState() == "jumpUp" then
-    	if self.isJumpOver then
-    		print("停下---------------------------------------xx")
+    	if self.isJumpOver then		--跳完到达地面
     		self:doEvent("goStanding")
-    		if isJumpBtnDown then
+    		if isJumpBtnDown then		--返回地面后，如果跳跃按钮还没松开，则继续跳
     			self:doEvent("goJumpUp")
     		end
     	else
@@ -142,58 +140,51 @@ function mariaAI:update()
 	    	self:doEvent("goJumpUp",false)  --跳到空中，中途松开向左按钮
 	    	return
 	    end
-    	if self.isJumpOver then
+    	if self.isJumpOver then		--跳完到达地面
 	    	self:doEvent("goWalkLeft")
-	    	if isJumpBtnDown then
-    			self:doEvent("goJumpLeft")  --返回地面后，如果向左按钮还没松开，则继续跳
+	    	if isJumpBtnDown then		--返回地面后，如果跳跃按钮还没松开，则继续跳
+    			self:doEvent("goJumpLeft")  
     		end
     	else
     		self:moveV()
     	end
     elseif self.m_fsm:getState() == "jumpRight" then
     	if self.m_oldCommond == OldCommond.walkRight then
-	    	self:moveH()
+	    	self:moveH()--jumpRight状态","水平移动
 	    else
-	    	print("pppppppppppppppppppppppppp---------")
 	    	self:doEvent("goJumpUp",false)	--跳到空中，中途松开向右按钮
 	    	return
 	    end
-    	if self.isJumpOver then
+    	if self.isJumpOver then		--跳完到达地面
 	    	self:doEvent("goWalkRight")
 	    	if isJumpBtnDown then
-    			self:doEvent("goJumpRight")  --返回地面后，如果向右按钮还没松开，则继续跳
+    			self:doEvent("goJumpRight")  --返回地面后，如果跳跃按钮还没松开，则继续跳
     		end
     	else
-    		self:moveV()
+    		self:moveV()--jumpRight状态","垂直移动
     	end
     end
 end
 
 function mariaAI:moveV()
 	local y = self:getPtRightDown().y
-	--print("down y : ",y,"  vSpeed: ",self.m_vSpeed)
 	local _type,_tilePt = self:ifCollistionV()
-	--print("-------------------当前vSpeed: "..self.m_vSpeed.."  当前y ："..y.."  当前_type: ".._type)
 	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image then
 		if self.m_vSpeed >=0 then  --向上遇到障碍，向下反弹
 			self.m_vSpeed = 0 - self.m_vSpeed
-			--print("碰壁-----------------")
+			print("碰壁-----------------")
 		else  					   --向下遇到障碍，垂直速度降为0
-			--print("回到地面--------------------------")
-			--self:unscheduleUpdate()
 			self.m_vSpeed = 0
 			self.isJumpOver = true
 			local _map = self:getParent().m_map
 			local _tab = {_map:tilecoordToPosition(_tilePt)}
 			local mapPtY = _map:getPositionY()
 			local _realPtY = _tab[2].y + mapPtY
-			self:setPositionY(_realPtY)
-			-- print("----------------------------------- vv  ",_tab[2].y,mapPtY)
+			self:setPositionY(_realPtY)			--对y坐标进行微调，使脚下始终刚好在一个块上面
 		end
 		return
 	end
-	self.isJumpOver = false
-	--print("竖直位移,_type: ".._type)
+	self.isJumpOver = false	--表示正在跳跃状态中
 	self.m_vSpeed = self.m_vSpeed - ACC_V
 	if self.m_vSpeed<-MAX_V_SPEED then
 		self.m_vSpeed = -MAX_V_SPEED
@@ -205,39 +196,34 @@ function mariaAI:moveV()
 	local mapPtY = _map:getPositionY()
 	
 	if self.m_vSpeed>0 then
-		if ptY < display.height / 10 * 7 or mapPtY <=-(mapHeight - display.height) then
+		if ptY < display.height / 10 * 7 or mapPtY <=-(mapHeight - display.height) then		--在玛丽y坐标小于0.7倍屏幕高度或者地图已经到了最高，则向上移动玛丽
 			ptY = ptY + self.m_vSpeed
 			self:setPositionY(ptY)
-			-- print("1111111111  ",self.m_vSpeed)
-		else
-			mapPtY = mapPtY-self.m_vSpeed
+		else                                            --否则向下移动地图
+			mapPtY = mapPtY-self.m_vSpeed  	
+			if mapPtY<-(mapHeight - display.height) then	--对地图坐标进行微调
+				print("重置地图Y坐标为mapHeight - display.height，"..(mapHeight - display.height))
+				mapPtY = -(mapHeight - display.height)
+			end
 			_map:setPositionY(mapPtY)
-			-- print("2222222222  ",self.m_vSpeed,mapPtY)
 		end
 		
 	elseif self.m_vSpeed<0 then
-		if ptY > display.height / 10 * 3 or mapPtY >=0 then
+		if ptY > display.height / 10 * 3 or mapPtY >=0 then		--玛丽y坐标大于0.3倍屏幕高度或者地图已经到了最低，则向下移动玛丽
 			ptY = ptY + self.m_vSpeed
 			self:setPositionY(ptY)
-			-- print("3333333333333  ",self.m_vSpeed)
-		else
+		else                                            --否则向上移动地图
 			mapPtY = mapPtY-self.m_vSpeed
-			if mapPtY>0 then
+			if mapPtY>0 then	--对地图坐标进行微调
 				print("重置地图Y坐标为0，"..mapPtY)
 				mapPtY = 0
 			end
 			_map:setPositionY(mapPtY)
-			-- print("44444444444444  ",self.m_vSpeed,mapPtY)
 		end
 	end
 
-
-
-	-- local ptY = self:getPositionY()
-	-- ptY = ptY + self.m_vSpeed
-	-- self:setPositionY(ptY)
 end
-
+--水平方向移动碰到障碍物时，对玛丽x坐标进行微调，保证玛丽不与障碍物交叉
 function mariaAI:adjustOffsetX()
 	local ptX = self:getPositionX()
 	local _map = self:getParent().m_map
@@ -246,33 +232,31 @@ function mariaAI:adjustOffsetX()
 
 	local rect = self.m_mariArmature:getBoundingBox()
 	local realPtX,tileNum
-	if self.m_direction == MariaDirectionType.right then
-		realPtX = ptX -mapPtX + rect.width/2
-		tileNum = math.floor(realPtX/_map.tileSize.width)
-		local mod = realPtX % _map.tileSize.width
-		print("num: ",tileNum,"   mod:  ",mod)
-		if mod~=0 and mod <= MAX_H_SPEED then
-			realPtX = tileNum * _map.tileSize.width
+	if self.m_direction == MariaDirectionType.right then	--向右移动时
+		realPtX = ptX -mapPtX + rect.width/2	--先得到玛丽的右边界在地图上的x坐标
+		tileNum = math.floor(realPtX/_map.tileSize.width)	--得到向左边数的地图块数
+		local mod = realPtX % _map.tileSize.width	--得到多出来的像素数
+		if mod~=0 and mod <= MAX_H_SPEED then		--当mod小于水平速度，则忽略mod
+			realPtX = tileNum * _map.tileSize.width	--舍去
 			ptX = realPtX + mapPtX - rect.width/2
-		elseif mod~=0 and mod >= _map.tileSize.width - MAX_H_SPEED then
-			realPtX = tileNum * _map.tileSize.width + _map.tileSize.width
+		elseif mod~=0 and mod >= _map.tileSize.width - MAX_H_SPEED then --当mod大于（块宽度-水平速度），则不能忽略mod
+			realPtX = tileNum * _map.tileSize.width + _map.tileSize.width	--进一
 			ptX = realPtX + mapPtX - rect.width/2
-		end
+		end--如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
 		self:setPositionX(ptX)
-	elseif self.m_direction == MariaDirectionType.left then
-		realPtX = ptX -mapPtX - rect.width/2
-		tileNum = math.ceil(realPtX/_map.tileSize.width)
-		local mod = realPtX % _map.tileSize.width
-		if mod~=0 and mod <= MAX_H_SPEED then
-			realPtX = tileNum * _map.tileSize.width - _map.tileSize.width
+	elseif self.m_direction == MariaDirectionType.left then	--向左移动时
+		realPtX = ptX -mapPtX - rect.width/2	--先得到玛丽的左边界在地图上的x坐标
+		tileNum = math.ceil(realPtX/_map.tileSize.width)	--得到向左边数的地图块数
+		local mod = realPtX % _map.tileSize.width			--得到多出来的像素数
+		if mod~=0 and mod <= MAX_H_SPEED then		
+			realPtX = tileNum * _map.tileSize.width - _map.tileSize.width	--舍去
 			ptX = realPtX + mapPtX + rect.width/2
-		elseif mod~=0 and mod >= _map.tileSize.width - MAX_H_SPEED then
+		elseif mod~=0 and mod >= _map.tileSize.width - MAX_H_SPEED then		--进一
 			realPtX = tileNum * _map.tileSize.width 
 			ptX = realPtX + mapPtX + rect.width/2
 		end
 		self:setPositionX(ptX)
 	end
-	print("=================,",self.m_direction,ptX,realPtX)
 end
 
 function mariaAI:moveH()
@@ -281,37 +265,49 @@ function mariaAI:moveH()
 	local mapLength = _map.tileSize.width * _map.mapSize.width
 	local mapPtX = _map:getPositionX()
 
-	local _type = self:ifCollistionH()
+	local function _moveH()
+		if self.m_speed<MAX_H_SPEED then
+			self.m_speed = self.m_speed + ACC_H
+		end
+		
+		if self.m_direction == MariaDirectionType.right then
+			if ptX < display.width / 10 * 7 or mapPtX <=-(mapLength - display.width) then--在玛丽x坐标小于0.7倍屏幕高度或者地图已经到了最右边，则向右移动玛丽
+				ptX = ptX + self.m_speed
+				self:setPositionX(ptX)
+			else
+				mapPtX = mapPtX-self.m_speed
+				_map:setPositionX(mapPtX)
+			end
+			
+		elseif self.m_direction == MariaDirectionType.left then--在玛丽x坐标大于0.3倍屏幕高度或者地图已经到了最左边，则向左移动玛丽
+			if ptX > display.width / 10 * 3 or mapPtX >=0 then
+				ptX = ptX - self.m_speed
+				self:setPositionX(ptX)
+			else
+				mapPtX = mapPtX+self.m_speed
+				_map:setPositionX(mapPtX)
+			end
+		end
+	end
+
+	local oldPtx = ptX
+	local oldMapPtX = mapPtX
+	_moveH()					--先向后演算一步
+	ptX = oldPtx 			--恢复演算前的坐标
+	mapPtX = oldMapPtX
+	local _type = self:ifCollistionH()	--演算后的地图类型
+	self:setPositionX(ptX)
+	_map:setPositionX(mapPtX)
+	--如果碰到障碍物，要微调
 	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image or _type==TileType.eTile_Bounder then
 		--撞到障碍物时，对横坐标进行微调
-		print(self.m_fsm:getState())
+		-- print(self.m_fsm:getState())
 		if self.m_fsm:getState()== "walkLeft" or self.m_fsm:getState()=="walkRight" or self.m_fsm:getState()=="jumpLeft" or self.m_fsm:getState()=="jumpRight" then
 			self:adjustOffsetX()
 		end
 		return
 	end
-	if self.m_speed<MAX_H_SPEED then
-		self.m_speed = self.m_speed + ACC_H
-	end
-	
-	if self.m_direction == MariaDirectionType.right then
-		if ptX < display.width / 10 * 7 or mapPtX <=-(mapLength - display.width) then
-			ptX = ptX + self.m_speed
-			self:setPositionX(ptX)
-		else
-			mapPtX = mapPtX-self.m_speed
-			_map:setPositionX(mapPtX)
-		end
-		
-	elseif self.m_direction == MariaDirectionType.left then
-		if ptX > display.width / 10 * 3 or mapPtX >=0 then
-			ptX = ptX - self.m_speed
-			self:setPositionX(ptX)
-		else
-			mapPtX = mapPtX+self.m_speed
-			_map:setPositionX(mapPtX)
-		end
-	end
+	_moveH()
 end
 
 --竖直方向上的碰撞检测,offSet是地图块的偏移量{x,y}
@@ -321,7 +317,7 @@ function mariaAI:ifCollistionV(bValue)
 	local _map = self:getParent().m_map
 	local pt_1,pt_2
 	bValue = bValue or 0
-	local _bol
+	local _bol		--方向是否是向上
 	if bValue==0 then
 		_bol = (self.m_vSpeed >=0)
 	elseif bValue==1 then
@@ -332,7 +328,6 @@ function mariaAI:ifCollistionV(bValue)
 		_bol = (self.m_vSpeed >=0)
 	end
 	if _bol then 		   --向上
-		-- print("---------向上：-----")
 		pt_1 = self:getPtLeftTop()			--需要检测的有左上和右上边界
 		pt_2 = self:getPtRightTop()
 		pt_1.y = pt_1.y+_offY
@@ -340,10 +335,7 @@ function mariaAI:ifCollistionV(bValue)
 		if pt_1.y>=display.height then				--首先判断是否到了边界
 			return TileType.eTile_Bounder
 		end
-		-- printTable(pt_2)
-		-- print("-------------,屏幕像素")
 	else 								--向下
-		-- print("---------向下：-----")
 		pt_1 = self:getPtLeftDown()			--需要检测的有左下和右下边界
 		pt_2 = self:getPtRightDown()
 		pt_1.y = pt_1.y-_offY
@@ -351,38 +343,28 @@ function mariaAI:ifCollistionV(bValue)
 		if pt_1.y<=0 then				--首先判断是否到了边界
 			return TileType.eTile_Bounder
 		end
-		-- printTable(pt_2)
-		-- print("-------------,屏幕像素")
 	end
 
 	local mapX,mapY = _map:getPosition()
-	-- print("地图坐标  ",mapY)
 	pt_1 = cc.p((pt_1.x - mapX),(pt_1.y - mapY))  --得到玛丽在地图上的像素坐标
 	pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
-	-- printTable(pt_2)
-	-- print("-------------,地图像素")
 	local _y 
 	if _bol then 
-		_y = 1
-	else
+		_y = 1		--如果方向为向上，则在两块之间时得到上面的块
+	else 			--如果方向为向下，则在两块之间时得到下面的块
 		_y = -1
 	end
+
 	pt_1 = _map:positionToTileCoord(pt_1,{x=1,y = _y})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x=-1,y = _y})
-	-- printTable(pt_2)
-	-- print("---------------------,地图块")
+
 	local type_1 = _map:tileTypeforPos(pt_1)		--得到块类型
 	local type_2 = _map:tileTypeforPos(pt_2)
-	-- print("type_1",type_1)
-	-- print("type_2",type_2)
+
 	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image or type_1==TileType.eTile_Land then		--如果阻止前进的东西，则先返回
-		-- print("type_1",type_1)
-		-- print("---------------------====111")
 		return type_1,pt_1
 	end
 	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or type_2==TileType.eTile_Monster_image or type_2==TileType.eTile_Land then
-		-- print("type_2",type_2)
-		-- print("---------------------====222")
 		return type_2,pt_2
 	end
 
@@ -423,17 +405,16 @@ function mariaAI:ifCollistionH()
 	pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
 	local _x 
 	if _bol then 
-		_x = 1
+		_x = 1		--如果方向为向右，则在两块之间时得到右面的块
 	else
-		_x = -1
+		_x = -1		--如果方向为向左，则在两块之间时得到左面的块
 	end
-	print("--------地图坐标x",mapX,"玛丽地图坐标x",pt_2.x)
+
 	pt_1 = _map:positionToTileCoord(pt_1,{x = _x,y=-1})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x = _x,y=1})
 	local type_1 = _map:tileTypeforPos(pt_1)		--得到块类型
 	local type_2 = _map:tileTypeforPos(pt_2)
-	-- print(type_1)
-	-- print(type_2)
+
 	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image then		--如果阻止前进的东西，则先返回
 		return type_1
 	end
@@ -518,7 +499,6 @@ function mariaAI:doEvent(event, ...)
 	if event == "goStanding" or event == "goWalkLeft" or event == "goWalkRight" then
 		self.m_vSpeed = 0
 		self.m_oldCommond = OldCommond.standing
-		printTraceback()
 		self.isJumpOver = false
 	end
 	--print("--------",event)
@@ -527,7 +507,6 @@ function mariaAI:doEvent(event, ...)
 		self.m_oldCommond = OldCommond.walkLeft
 	end
 	if event == "goWalkRight" or event == "goJumpRight" then
-		--printTraceback()
 		self:changeDirection(MariaDirectionType.right)
 		self.m_oldCommond = OldCommond.walkRight
 	end
@@ -545,21 +524,21 @@ end
 function mariaAI:walkRight()
 	self:playAni(aniType.walk)
 end
-
+--如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
 function mariaAI:jumpUp(event)
 	if event.args[1]==nil or event.args[1] then
 		self.m_vSpeed = MAX_V_SPEED
 	end
 	self:playAni(aniType.jump)
 end
-
+--如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
 function mariaAI:jumpLeft(event)
 	if event.args[1]==nil or event.args[1] then
 		self.m_vSpeed = MAX_V_SPEED
 	end
 	self:playAni(aniType.jump)
 end
-
+--如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
 function mariaAI:jumpRight(event)
 	if event.args[1]==nil or event.args[1] then
 		self.m_vSpeed = MAX_V_SPEED

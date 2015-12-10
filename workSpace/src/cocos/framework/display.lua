@@ -456,11 +456,8 @@ local function newAnimation(frames, time)
 end
 
 function display.newAnimation(...)
-    print("--------------------------------===========,,,,")
     local params = {...}
     local c = #params
-    printTable(params)
-    print("cccccc: "..c)
     if c == 2 then
         -- frames, time
         return newAnimation(params[1], params[2])
