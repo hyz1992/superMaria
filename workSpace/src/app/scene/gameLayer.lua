@@ -23,7 +23,7 @@ function gameLayer:onCreate()
 
     self.m_maria = mariaAI.new()
         :addTo(self)
-        :move(96, 5*self.m_map.tileSize.height)
+        :move(5*self.m_map.tileSize.width, 5*self.m_map.tileSize.height)
 
     local listener = cc.EventListenerKeyboard:create()
     listener:registerScriptHandler(handler(self,self.onKeyPressed), cc.Handler.EVENT_KEYBOARD_PRESSED )

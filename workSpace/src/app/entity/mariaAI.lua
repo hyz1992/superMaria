@@ -32,7 +32,7 @@ local MAX_V_SPEED = 12            --最大垂直速度
 local ACC_V = 0.5					--垂直加速度
 
 local START_H_SPEED = 0.5			--水平方向初始速度
-local MAX_H_SPEED = 3				--水平方向最大速度
+local MAX_H_SPEED = 4				--水平方向最大速度
 local ACC_H = 0.1					--水平方向加速度
 
 function mariaAI:ctor()
@@ -108,7 +108,6 @@ function mariaAI:update()
 	local _type,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
 	if _type==TileType.eTile_Ground or _type==TileType.eTile_Pillar or _type==TileType.eTile_Mountain or _type==TileType.eTile_Cloud or _type==TileType.eTile_BackGround then
 		if self.m_fsm:getState() == "standing" then
-			print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~_type: ",_type)
 			self:doEvent("goJumpUp",false)
 		elseif self.m_fsm:getState() == "walkLeft" then
 			self:doEvent("goJumpLeft",false)
@@ -172,7 +171,6 @@ function mariaAI:moveV()
 	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image then
 		if self.m_vSpeed >=0 then  --向上遇到障碍，向下反弹
 			self.m_vSpeed = 0 - self.m_vSpeed
-			print("碰壁-----------------")
 		else  					   --向下遇到障碍，垂直速度降为0
 			self.m_vSpeed = 0
 			self.isJumpOver = true
@@ -298,10 +296,11 @@ function mariaAI:moveH()
 	local _type = self:ifCollistionH()	--演算后的地图类型
 	self:setPositionX(ptX)
 	_map:setPositionX(mapPtX)
+
 	--如果碰到障碍物，要微调
 	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image or _type==TileType.eTile_Bounder then
 		--撞到障碍物时，对横坐标进行微调
-		-- print(self.m_fsm:getState())
+
 		if self.m_fsm:getState()== "walkLeft" or self.m_fsm:getState()=="walkRight" or self.m_fsm:getState()=="jumpLeft" or self.m_fsm:getState()=="jumpRight" then
 			self:adjustOffsetX()
 		end
@@ -354,20 +353,23 @@ function mariaAI:ifCollistionV(bValue)
 	else 			--如果方向为向下，则在两块之间时得到下面的块
 		_y = -1
 	end
+	pt_3 = cc.p((pt_1.x+pt_2.x)/2,(pt_1.y+pt_2.y)/2)
 
 	pt_1 = _map:positionToTileCoord(pt_1,{x=1,y = _y})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x=-1,y = _y})
-
+	pt_3 = _map:positionToTileCoord(pt_3,{x = _x})
 	local type_1 = _map:tileTypeforPos(pt_1)		--得到块类型
 	local type_2 = _map:tileTypeforPos(pt_2)
-
+	local type_3 = _map:tileTypeforPos(pt_3)
 	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image or type_1==TileType.eTile_Land then		--如果阻止前进的东西，则先返回
 		return type_1,pt_1
 	end
 	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or type_2==TileType.eTile_Monster_image or type_2==TileType.eTile_Land then
 		return type_2,pt_2
 	end
-
+	if type_3==TileType.eTile_Barrier or type_3==TileType.eTile_Object_image or type_3==TileType.eTile_Monster_image then
+		return type_3
+	end
 	if type_1~=TileType.eTile_None then
 		return type_1,pt_1
 	else
@@ -409,19 +411,24 @@ function mariaAI:ifCollistionH()
 	else
 		_x = -1		--如果方向为向左，则在两块之间时得到左面的块
 	end
+	pt_3 = cc.p((pt_1.x+pt_2.x)/2,(pt_1.y+pt_2.y)/2)
 
 	pt_1 = _map:positionToTileCoord(pt_1,{x = _x,y=-1})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x = _x,y=1})
+	pt_3 = _map:positionToTileCoord(pt_3,{x = _x})
 	local type_1 = _map:tileTypeforPos(pt_1)		--得到块类型
 	local type_2 = _map:tileTypeforPos(pt_2)
+	local type_3 = _map:tileTypeforPos(pt_3)
 
 	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image then		--如果阻止前进的东西，则先返回
 		return type_1
 	end
-	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image then
+	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or type_2==TileType.eTile_Monster_image then
 		return type_2
 	end
-
+	if type_3==TileType.eTile_Barrier or type_3==TileType.eTile_Object_image or type_3==TileType.eTile_Monster_image then
+		return type_3
+	end
 	if type_1~=TileType.eTile_None then
 		return type_1
 	else

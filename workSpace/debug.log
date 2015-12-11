@@ -1931,9 +1931,15 @@ crycpo acc  72
 
 [LUA-print] 重置地图Y坐标为0，1.5
 
-[LUA-print] 碰壁-----------------
+[LUA-print] 重置地图Y坐标为0，5.5
 
-[LUA-print] 碰壁-----------------
+[LUA-print] 重置地图Y坐标为0，1.5
 
-[LUA-print] 碰壁-----------------
+[LUA-print] 重置地图Y坐标为0，10
+
+[LUA-print] 重置地图Y坐标为0，9.5
+
+[LUA-print] 重置地图Y坐标为0，10
+
+[LUA-print] 重置地图Y坐标为0，10
 
