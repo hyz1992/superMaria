@@ -32,29 +32,24 @@ function gameLayer:onCreate()
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self.m_maria)
 
-    self.btn_left = ccui.Button:create("left_1.png","left_2.png")
+    self.btn_left = ccui.Button:create("control_01.png","control_02.png")
             :addTo(self)
-            :move(70,80)
-            --:scale(0.4)
-            :opacity(150)
+            :move(80,80)
 
-    self.btn_right = ccui.Button:create("right_1.png","right_2.png")
+    self.btn_right = ccui.Button:create("control_01.png","control_02.png")
             :addTo(self)
-            :move(170,80)
-            --:scale(0.4)
-            :opacity(150)
+            :move(220,80)
 
-    self.btn_jump = ccui.Button:create("up_1.png","up_2.png")
-            :addTo(self)
-            :move(display.width-100,80)
-            --:scale(0.4)
-            :opacity(150)
+    self.btn_right:setScaleX(-1)
 
-    self.timeScaleBtn = ccui.Button:create("up_1.png","up_2.png")
+    self.btn_jump  = ccui.Button:create("control_05.png","control_06.png")
             :addTo(self)
-            :move(display.width-100,display.height-80)
-            --:scale(0.4)
-            :opacity(150)
+            :move(display.width-70,120)
+
+    self.timeScaleBtn= ccui.Button:create("control_03.png","control_04.png")
+            :addTo(self)
+            :move(display.width-200,80)
+    
 
     self.btn_left:addTouchEventListener(handler(self,self.onButtonTouch))
     self.btn_right:addTouchEventListener(handler(self,self.onButtonTouch))
@@ -105,7 +100,14 @@ end
 
 function gameLayer:onKeyPressed(keyCode,event)
     if keyCode==cc.KeyCode.KEY_BACK or keyCode==cc.KeyCode.KEY_A then
-        cc.MessageBox("caonima","qunima")
+        device.showAlert("提示", "您确定退出游戏吗?", {"是", "否"}, function (event)  
+            printTable(event)
+            if event.buttonIndex == 1 then  
+                cc.Director:getInstance():endToLua()
+            else  
+                device.cancelAlert()   
+            end  
+        end)
     end
     local _maria = event:getCurrentTarget()
     _maria:onKeyPressed(keyCode,event)
