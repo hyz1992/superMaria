@@ -35,11 +35,14 @@ local START_H_SPEED = 0.5			--水平方向初始速度
 local MAX_H_SPEED = 4				--水平方向最大速度
 local ACC_H = 0.1					--水平方向加速度
 
+local gggggg = false
+
+
 function mariaAI:ctor()
 	display.loadSpriteFrames("mario.plist","mario.png")
-	self.m_mariArmature = display.newSprite()
+	self._spr = display.newSprite()
 					:align(display.CENTER_BOTTOM,0,0)
-	self:addChild(self.m_mariArmature,0,0)
+	self:addChild(self._spr,0,0)
 
 	self:changeDirection(MariaDirectionType.right)
 
@@ -48,8 +51,6 @@ function mariaAI:ctor()
 	self.m_oldCommond = OldCommond.standing     --用于判断跳跃过程中的水平前进方向
 	self.isJumpOver = false						--是否跳跃完毕
 	self.m_mariaType = MariaType.fire			--当前玛丽的类型
-
-	self:playAni()
 
     self:addStateMachine()
     self:onUpdate(handler(self,self.update))
@@ -62,44 +63,44 @@ end
 function mariaAI:playAni(_type)
 	--_type = aniType.standing
 	--print(_type)
-	self.m_mariArmature:stopAllActions()
+	self._spr:stopAllActions()
 	if self.m_mariaType == MariaType.small then
 		if aniType.walk == _type then
 			local animation = display.newAnimation("mario_1_%d.png",0,2,false,0.2)
 			local ani = cc.Animate:create(animation)
-			self.m_mariArmature:runAction(cc.RepeatForever:create(ani))
+			self._spr:runAction(cc.RepeatForever:create(ani))
 		elseif aniType.jump == _type then
-			self.m_mariArmature:setSpriteFrame("mario_1_2.png")
+			self._spr:setSpriteFrame("mario_1_2.png")
 		elseif aniType.standing == _type then
-			self.m_mariArmature:setSpriteFrame("mario_1_5.png")
+			self._spr:setSpriteFrame("mario_1_5.png")
 		elseif aniType.die == _type then
-			self.m_mariArmature:setSpriteFrame("mario_1_6.png")
+			self._spr:setSpriteFrame("mario_1_6.png")
 		end
 	elseif self.m_mariaType == MariaType.big then
 		if aniType.walk == _type then
 			local animation = display.newAnimation("mario_2_%d.png",0,2,false,0.2)
 			local ani = cc.Animate:create(animation)
-			self.m_mariArmature:runAction(cc.RepeatForever:create(ani))
+			self._spr:runAction(cc.RepeatForever:create(ani))
 		elseif aniType.jump == _type then
-			self.m_mariArmature:setSpriteFrame("mario_2_2.png")
+			self._spr:setSpriteFrame("mario_2_2.png")
 		elseif aniType.standing == _type then
-			self.m_mariArmature:setSpriteFrame("mario_2_5.png")
+			self._spr:setSpriteFrame("mario_2_5.png")
 		elseif aniType.down == _type then
-			self.m_mariArmature:setSpriteFrame("mario_2_6.png")
+			self._spr:setSpriteFrame("mario_2_6.png")
 		end
 	elseif self.m_mariaType == MariaType.fire then
 		if aniType.walk == _type then
 			local animation = display.newAnimation("mario_3_%d.png",0,2,false,0.2)
 			local ani = cc.Animate:create(animation)
-			self.m_mariArmature:runAction(cc.RepeatForever:create(ani))
+			self._spr:runAction(cc.RepeatForever:create(ani))
 		elseif aniType.jump == _type then
-			self.m_mariArmature:setSpriteFrame("mario_3_2.png")
+			self._spr:setSpriteFrame("mario_3_2.png")
 		elseif aniType.standing == _type then
-			self.m_mariArmature:setSpriteFrame("mario_3_5.png")
+			self._spr:setSpriteFrame("mario_3_5.png")
 		elseif aniType.down == _type then
-			self.m_mariArmature:setSpriteFrame("mario_3_6.png")
+			self._spr:setSpriteFrame("mario_3_6.png")
 		elseif aniType.fire == _type then
-			self.m_mariArmature:setSpriteFrame("mario_3_7.png")
+			self._spr:setSpriteFrame("mario_3_7.png")
 		end
 	end
 end
@@ -168,7 +169,7 @@ end
 function mariaAI:moveV()
 	local y = self:getPtRightDown().y
 	local _type,_tilePt = self:ifCollistionV()
-	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image then
+	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or gggggg then
 		if self.m_vSpeed >=0 then  --向上遇到障碍，向下反弹
 			self.m_vSpeed = 0 - self.m_vSpeed
 		else  					   --向下遇到障碍，垂直速度降为0
@@ -228,7 +229,7 @@ function mariaAI:adjustOffsetX()
 	local mapLength = _map.tileSize.width * _map.mapSize.width
 	local mapPtX = _map:getPositionX()
 
-	local rect = self.m_mariArmature:getBoundingBox()
+	local rect = self._spr:getBoundingBox()
 	local realPtX,tileNum
 	if self.m_direction == MariaDirectionType.right then	--向右移动时
 		realPtX = ptX -mapPtX + rect.width/2	--先得到玛丽的右边界在地图上的x坐标
@@ -298,7 +299,7 @@ function mariaAI:moveH()
 	_map:setPositionX(mapPtX)
 
 	--如果碰到障碍物，要微调
-	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or _type==TileType.eTile_Monster_image or _type==TileType.eTile_Bounder then
+	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or gggggg or _type==TileType.eTile_Bounder then
 		--撞到障碍物时，对横坐标进行微调
 
 		if self.m_fsm:getState()== "walkLeft" or self.m_fsm:getState()=="walkRight" or self.m_fsm:getState()=="jumpLeft" or self.m_fsm:getState()=="jumpRight" then
@@ -361,13 +362,13 @@ function mariaAI:ifCollistionV(bValue)
 	local type_1 = _map:tileTypeforPos(pt_1)		--得到块类型
 	local type_2 = _map:tileTypeforPos(pt_2)
 	local type_3 = _map:tileTypeforPos(pt_3)
-	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image or type_1==TileType.eTile_Land then		--如果阻止前进的东西，则先返回
+	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or gggggg or type_1==TileType.eTile_Land then		--如果阻止前进的东西，则先返回
 		return type_1,pt_1
 	end
-	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or type_2==TileType.eTile_Monster_image or type_2==TileType.eTile_Land then
+	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or gggggg or type_2==TileType.eTile_Land then
 		return type_2,pt_2
 	end
-	if type_3==TileType.eTile_Barrier or type_3==TileType.eTile_Object_image or type_3==TileType.eTile_Monster_image then
+	if type_3==TileType.eTile_Barrier or type_3==TileType.eTile_Object_image or gggggg then
 		return type_3
 	end
 	if type_1~=TileType.eTile_None then
@@ -420,13 +421,16 @@ function mariaAI:ifCollistionH()
 	local type_2 = _map:tileTypeforPos(pt_2)
 	local type_3 = _map:tileTypeforPos(pt_3)
 
-	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or type_1==TileType.eTile_Monster_image then		--如果阻止前进的东西，则先返回
+	local gid = _map.m_barrier:getTileGIDAt(pt_2)
+	print("gid: ",gid)
+
+	if type_1==TileType.eTile_Barrier or type_1==TileType.eTile_Object_image or gggggg then		--如果阻止前进的东西，则先返回
 		return type_1
 	end
-	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or type_2==TileType.eTile_Monster_image then
+	if type_2==TileType.eTile_Barrier or type_2==TileType.eTile_Object_image or gggggg then
 		return type_2
 	end
-	if type_3==TileType.eTile_Barrier or type_3==TileType.eTile_Object_image or type_3==TileType.eTile_Monster_image then
+	if type_3==TileType.eTile_Barrier or type_3==TileType.eTile_Object_image or gggggg then
 		return type_3
 	end
 	if type_1~=TileType.eTile_None then
@@ -437,7 +441,7 @@ function mariaAI:ifCollistionH()
 end
 
 function mariaAI:getPtLeftTop()
-	local rect = self.m_mariArmature:getBoundingBox()
+	local rect = self._spr:getBoundingBox()
 	local position = cc.p(self:getPositionX(),self:getPositionY())
 	position.x = position.x - rect.width/2
 	position.y = position.y + rect.height
@@ -445,14 +449,14 @@ function mariaAI:getPtLeftTop()
 end
 
 function mariaAI:getPtLeftDown()
-	local rect = self.m_mariArmature:getBoundingBox()
+	local rect = self._spr:getBoundingBox()
 	local position = cc.p(self:getPositionX(),self:getPositionY())
 	position.x = position.x - rect.width/2
 	return position
 end
 
 function mariaAI:getPtRightTop()
-	local rect = self.m_mariArmature:getBoundingBox()
+	local rect = self._spr:getBoundingBox()
 	local position = cc.p(self:getPositionX(),self:getPositionY())
 	position.x = position.x + rect.width/2
 	position.y = position.y + rect.height
@@ -460,7 +464,7 @@ function mariaAI:getPtRightTop()
 end
 
 function mariaAI:getPtRightDown()
-	local rect = self.m_mariArmature:getBoundingBox()
+	local rect = self._spr:getBoundingBox()
 	local position = cc.p(self:getPositionX(),self:getPositionY())
 	position.x = position.x + rect.width /2
 	return position
@@ -559,7 +563,7 @@ end
 
 function mariaAI:changeDirection(_direction)
 	self.m_direction = _direction
-	self.m_mariArmature:setScale(self.m_direction,1)
+	self._spr:setScale(self.m_direction,1)
 end
 
 function mariaAI:onKeyPressed(keyCode,event)

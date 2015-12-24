@@ -23,6 +23,7 @@ function mariaMap:ctor(tmxPath)
 	self.mapSize = map:getMapSize()		--一共有多少块
 
 	self.m_monster_image = map:getLayer("monster_image")	 --怪物对应的图块
+			:hide()
 	self.m_object_image = map:getLayer("object_image")		 --对象物体对应的图块
 	self.m_barrier = map:getLayer("barrier")				     --各种障碍物，（地板、石块、管道）
 	self.m_ground = map:getLayer("ground")				     --陆地背景，树、栅栏等装饰物
@@ -32,6 +33,26 @@ function mariaMap:ctor(tmxPath)
 	self.m_background = map:getLayer("background")			 --背景天空
 
 	self.m_objectGroup = map:getObjectGroup("object")		 --对象
+
+	-- print("m_monster_image")
+	-- for i=0,self.mapSize.width-1 do
+	-- 	for j=0,self.mapSize.height-1 do
+	-- 		local gid = self.m_monster_image:getTileGIDAt(cc.p(i,j))
+	-- 		if gid~=0 then
+	-- 			print("x="..i..",y="..j,",gid: ",gid)
+	-- 		end
+	-- 	end
+	-- end
+	-- print("\n")
+	-- print("m_object_image")
+	-- for i=0,self.mapSize.width-1 do
+	-- 	for j=0,self.mapSize.height-1 do
+	-- 		local gid = self.m_object_image:getTileGIDAt(cc.p(i,j))
+	-- 		if gid~=0 then
+	-- 			print("x="..i..",y="..j,",gid: ",gid)
+	-- 		end
+	-- 	end
+	-- end
 
 	printTable(self.tileSize)
 	printTable(self.mapSize)

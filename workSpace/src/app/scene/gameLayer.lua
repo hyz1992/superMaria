@@ -1,6 +1,7 @@
 local mariaMap = require("app.entity.mariaMap")
 local mariaAI = require("app.entity.mariaAI")
 
+
 local gameLayer = class("gameLayer", cc.load("mvc").ViewBase)
 
 function gameLayer:onCreate()
@@ -14,9 +15,8 @@ function gameLayer:onCreate()
         :move(display.cx, display.cy + 200)
         :addTo(self)
 
-    -- local xx = cc.numSprite:create()
-    -- self:addChild(xx)
-    -- xx:setPosition(100,100)
+    display.loadSpriteFrames("mariaObj.plist","mariaObj.png")
+    display.loadSpriteFrames("control.plist","control.png")
 
     self.m_map = mariaMap.new("tmx/mary1.tmx")
                     :addTo(self,0,0)
@@ -32,21 +32,21 @@ function gameLayer:onCreate()
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self.m_maria)
 
-    self.btn_left = ccui.Button:create("control_01.png","control_02.png")
+    self.btn_left = ccui.Button:create("control_01.png","control_02.png","",1)
             :addTo(self)
             :move(80,80)
 
-    self.btn_right = ccui.Button:create("control_01.png","control_02.png")
+    self.btn_right = ccui.Button:create("control_01.png","control_02.png","",1)
             :addTo(self)
             :move(220,80)
 
     self.btn_right:setScaleX(-1)
 
-    self.btn_jump  = ccui.Button:create("control_05.png","control_06.png")
+    self.btn_jump  = ccui.Button:create("control_05.png","control_06.png","",1)
             :addTo(self)
             :move(display.width-70,120)
 
-    self.timeScaleBtn= ccui.Button:create("control_03.png","control_04.png")
+    self.timeScaleBtn= ccui.Button:create("control_03.png","control_04.png","",1)
             :addTo(self)
             :move(display.width-200,80)
     
@@ -116,6 +116,26 @@ end
 function gameLayer:onKeyReleased(keyCode,event)
     local _maria = event:getCurrentTarget()
     _maria:onKeyReleased(keyCode,event)
+end
+
+function gameLayer:onEnter()
+    print("--pppppppp------------------")
+    local _tab_1 = self.m_map.m_objectGroup:getObjects()
+    print(type(_tab_1))
+    for k,v in pairs(_tab_1) do
+        local node = parseTiledObject(v)
+        if node then
+            node:addTo(self.m_map)
+        end
+        -- for kk,vv in pairs(v) do
+        --     print("key: ",kk,"value: ",vv)
+        -- end
+    end
+end
+
+function gameLayer:onExit()
+    display.removeSpriteFrame("mariaObj.plist")
+    display.removeSpriteFrame("control.plist")
 end
 
 return gameLayer

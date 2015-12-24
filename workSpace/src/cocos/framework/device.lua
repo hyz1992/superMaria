@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 ]]
-local luaj = require("cocos.cocos2d.luaj")
+local luaj
 require("cocos.cocos2d.json")
 local device = {}
 
@@ -104,6 +104,10 @@ printInfo("# device.writablePath          = " .. device.writablePath)
 printInfo("# device.directorySeparator    = " .. device.directorySeparator)
 printInfo("# device.pathSeparator         = " .. device.pathSeparator)
 printInfo("#")
+
+if device.platform == "android" then
+	luaj = require("cocos.cocos2d.luaj")
+end
 
 function device.showAlert(title, message, buttonLabels, listener)
     if type(buttonLabels) ~= "table" then
