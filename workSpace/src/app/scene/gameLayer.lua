@@ -119,9 +119,9 @@ function gameLayer:onKeyReleased(keyCode,event)
 end
 
 function gameLayer:onEnter()
-    print("--pppppppp------------------")
+    --print("--pppppppp------------------")
     local _tab_1 = self.m_map.m_objectGroup:getObjects()
-    print(type(_tab_1))
+    --print(type(_tab_1))
     for k,v in pairs(_tab_1) do
         local node = parseTiledObject(v)
         if node then

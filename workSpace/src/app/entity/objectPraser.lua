@@ -5,9 +5,9 @@ local monster_tortoise = require("app.entity.monster_tortoise")
 function parseTiledObject(objectTab)
 	local ret = nil
 	local name = objectTab.name
-	print(name)
+	--print(name)
 	if name == "Monster" then			--怪物
-		print("Monster")
+		--print("Monster")
 		ret = createMonster(objectTab)
 	elseif name == "Prop" then			--金币
 	elseif name == "Brick" then			--箱子
@@ -29,10 +29,10 @@ function createMonster(objectTab)
 	local _a = objectTab.a
 	local _b = objectTab.b
 	if _a=="AppMonsterSmall" and _b=="BehMonsterSmall" then
-		print("创建蘑菇敌人")
+		--print("创建蘑菇敌人")
 		ret = monster_mushroom.new(objectTab)
 	elseif _a=="AppTortoise" and _b=="BehTortoise" then
-		print("创建乌龟敌人")
+		--print("创建乌龟敌人")
 		ret = monster_tortoise.new(objectTab)
 	end
 	return ret
