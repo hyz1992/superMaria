@@ -18,12 +18,13 @@ function gameLayer:onCreate()
     display.loadSpriteFrames("mariaObj.plist","mariaObj.png")
     display.loadSpriteFrames("control.plist","control.png")
 
-    self.m_map = mariaMap.new("tmx/mary1.tmx")
+    self.m_map = mariaMap.new("tmx/mary2.tmx")
                     :addTo(self,0,0)
+                    -- :move(-200,0)
 
     self.m_maria = mariaAI.new()
         :addTo(self)
-        :move(5*self.m_map.tileSize.width, 5*self.m_map.tileSize.height)
+        :move(5*self.m_map.tileSize.width, 10*self.m_map.tileSize.height)
 
     local listener = cc.EventListenerKeyboard:create()
     listener:registerScriptHandler(handler(self,self.onKeyPressed), cc.Handler.EVENT_KEYBOARD_PRESSED )

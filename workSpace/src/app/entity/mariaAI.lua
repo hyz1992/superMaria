@@ -31,7 +31,7 @@ function mariaAI:ctor(...)
 
 	print("================================self.m_vSpeed: ",self.m_vSpeed)
 	self.m_oldCommond = OldCommond.standing     --用于判断跳跃过程中的水平前进方向
-	self.isJumpOver = false						--是否跳跃完毕
+	
 	self.m_mariaType = MariaType.fire			--当前玛丽的类型
 
     self:addStateMachine()
@@ -44,7 +44,7 @@ function mariaAI:onExit()
 end
 
 function mariaAI:playAni(_type)
-	--_type = aniType.standing
+	_type = aniType.standing
 	--print(_type)
 	self._spr:stopAllActions()
 	if self.m_mariaType == MariaType.small then
@@ -89,13 +89,20 @@ function mariaAI:playAni(_type)
 end
 
 function mariaAI:update()
-	local _type,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
-	if _type==TileType.eTile_Ground or _type==TileType.eTile_Pillar or _type==TileType.eTile_Mountain or _type==TileType.eTile_Cloud or _type==TileType.eTile_BackGround then
+	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
+	local pt_2 = self:getPtRightDown()
+	local _map = self:getMap()
+	local mapX,mapY = _map:getPosition()
+	pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
+	print("-------------开始")
+	print(self.m_fsm:getState(),"x:"..pt_2.x.." y:"..pt_2.y.."   _bIsCollision: ",_bIsCollision)
+	if not _bIsCollision then
 		if self.m_fsm:getState() == "standing" then
 			self:doEvent("goJumpUp",false)
 		elseif self.m_fsm:getState() == "walkLeft" then
 			self:doEvent("goJumpLeft",false)
 		elseif self.m_fsm:getState() == "walkRight" then
+			print("有掉下去的趋势")
 			self:doEvent("goJumpRight",false)
 		end
 	end
@@ -105,7 +112,10 @@ function mariaAI:update()
     elseif self.m_fsm:getState() == "walkLeft" then
     	self:moveH()
     elseif self.m_fsm:getState() == "walkRight" then
+    	print("走路右移")
+    	sdfgh = true
     	self:moveH()
+    	sdfgh = false
     elseif self.m_fsm:getState() == "jumpUp" then
     	if self.isJumpOver then		--跳完到达地面
     		self:doEvent("goStanding")
@@ -116,36 +126,60 @@ function mariaAI:update()
     		self:moveV()
     	end
     elseif self.m_fsm:getState() == "jumpLeft" then
-    	if self.m_oldCommond == OldCommond.walkLeft then  
+    	if self.m_oldCommond == OldCommond.walkLeft then
+    		print("左跳，左移")
 	    	self:moveH()
 	    else
+	    	print("左跳转为直跳")
 	    	self:doEvent("goJumpUp",false)  --跳到空中，中途松开向左按钮
 	    	return
 	    end
     	if self.isJumpOver then		--跳完到达地面
+    		print("左跳到达地面")
 	    	self:doEvent("goWalkLeft")
 	    	if isJumpBtnDown then		--返回地面后，如果跳跃按钮还没松开，则继续跳
     			self:doEvent("goJumpLeft")  
     		end
     	else
+    		print("左跳，上下移")
     		self:moveV()
     	end
     elseif self.m_fsm:getState() == "jumpRight" then
     	if self.m_oldCommond == OldCommond.walkRight then
+    		print("右跳，右移")
+    		sdfgh = true
 	    	self:moveH()--jumpRight状态","水平移动
+	    	sdfgh = false
 	    else
+	    	print("右跳转为直跳")
 	    	self:doEvent("goJumpUp",false)	--跳到空中，中途松开向右按钮
 	    	return
 	    end
     	if self.isJumpOver then		--跳完到达地面
+    		print("右跳到达地面")
 	    	self:doEvent("goWalkRight")
 	    	if isJumpBtnDown then
     			self:doEvent("goJumpRight")  --返回地面后，如果跳跃按钮还没松开，则继续跳
     		end
     	else
-    		self:moveV()--jumpRight状态","垂直移动
+    		print("右跳，上下移")
+    		--self:moveV()--jumpRight状态","垂直移动
+    		local pt_2 = self:getPtRightDown()
+			local _map = self:getMap()
+			local mapX,mapY = _map:getPosition()
+			pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
+			print("------".."x:"..pt_2.x.." y:"..pt_2.y)
+			jklh = true
+    		self:moveV()
+    		jklh = false
+    		local pt_3 = self:getPtRightDown()
+			_map = self:getMap()
+			mapX,mapY = _map:getPosition()
+			pt_3 = cc.p((pt_3.x - mapX),(pt_3.y - mapY))
+			print("------------".."x:"..pt_3.x.." y:"..pt_3.y)
     	end
     end
+    print("----------------结束")
 end
 
 function mariaAI:addStateMachine()
@@ -160,7 +194,7 @@ function mariaAI:addStateMachine()
         
         -- 事件和状态转换
         events = {
-            {name = "goStanding",  from = {"standing","walkLeft","walkRight","jumpUp","jumpLeft","jumpRight"}, to = "standing" },
+            {name = "goStanding",  from = {"walkLeft","walkRight","jumpUp","jumpLeft","jumpRight"}, to = "standing" },
             {name = "goWalkLeft",  from = {"standing","walkRight","jumpLeft"}, to = "walkLeft" },
             {name = "goWalkRight",  from = {"standing","walkLeft","jumpRight"}, to = "walkRight" },
             {name = "goJumpUp",  from = {"standing","jumpLeft","jumpRight"}, to = "jumpUp" },
