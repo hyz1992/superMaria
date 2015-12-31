@@ -24,8 +24,10 @@ function monster_mushroom:update()
 	if not _bIsCollision then
 		if self.m_fsm:getState() == "walkLeft" then
 			self:doEvent("goJumpLeft")
+			self:moveV()--为了使其立马掉下去，不至于因为水平速速过快而跨国砖块间隙
 		elseif self.m_fsm:getState() == "walkRight" then
 			self:doEvent("goJumpRight")
+			self:moveV()--为了使其立马掉下去，不至于因为水平速速过快而跨国砖块间隙
 		end
 	end
 
@@ -104,25 +106,19 @@ function monster_mushroom:doEvent(event, ...)
 	self.m_fsm:doEvent(event, ...)
 end
 
-function monster_mushroom:standing()
-
-end
-
-function monster_mushroom:walkLeft()
-	
-end
-
-function monster_mushroom:walkRight()
-	
-end
-
---如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
-function monster_mushroom:jumpLeft()
-	
-end
---如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
-function monster_mushroom:jumpRight()
-	
+function monster_mushroom:playAni(_type)
+	self._spr:stopAllActions()
+	if _type==aniType.walk then
+		self._spr:setSpriteFrame("img_33.png")
+		local scale_x = 1
+		local sq = transition.sequence{cc.CallFunc:create(function ( ... )
+			self._spr:setScaleX(scale_x)
+			scale_x = scale_x*-1
+		end),cc.DelayTime:create(0.15)}
+		self._spr:runAction(cc.RepeatForever:create(sq))
+	else
+		self._spr:setSpriteFrame("img_33.png")
+	end
 end
 
 return monster_mushroom

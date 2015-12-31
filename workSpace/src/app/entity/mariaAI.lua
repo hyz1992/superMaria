@@ -7,14 +7,6 @@ MariaType.small = 1
 MariaType.big = 2
 MariaType.fire = 3
 
-local aniType = {}
-aniType.standing = 1
-aniType.walk = 2
-aniType.jump = 3
-aniType.die = 4
-aniType.fire = 5
-aniType.down = 6
-
 local OldCommond = {}
 OldCommond.standing = 0
 OldCommond.walkLeft = 1
@@ -44,7 +36,7 @@ function mariaAI:onExit()
 end
 
 function mariaAI:playAni(_type)
-	_type = aniType.standing
+	-- _type = aniType.standing
 	--print(_type)
 	self._spr:stopAllActions()
 	if self.m_mariaType == MariaType.small then
@@ -73,7 +65,7 @@ function mariaAI:playAni(_type)
 		end
 	elseif self.m_mariaType == MariaType.fire then
 		if aniType.walk == _type then
-			local animation = display.newAnimation("mario_3_%d.png",0,2,false,0.2)
+			local animation = display.newAnimation("mario_3_%d.png",0,2,false,0.15)
 			local ani = cc.Animate:create(animation)
 			self._spr:runAction(cc.RepeatForever:create(ani))
 		elseif aniType.jump == _type then
@@ -94,16 +86,18 @@ function mariaAI:update()
 	local _map = self:getMap()
 	local mapX,mapY = _map:getPosition()
 	pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
-	print("-------------开始")
-	print(self.m_fsm:getState(),"x:"..pt_2.x.." y:"..pt_2.y.."   _bIsCollision: ",_bIsCollision)
+	-- print("-------------开始")
+	-- print(self.m_fsm:getState(),"x:"..pt_2.x.." y:"..pt_2.y.."   _bIsCollision: ",_bIsCollision)
 	if not _bIsCollision then
+		-- print("有掉下去的趋势")
 		if self.m_fsm:getState() == "standing" then
 			self:doEvent("goJumpUp",false)
 		elseif self.m_fsm:getState() == "walkLeft" then
 			self:doEvent("goJumpLeft",false)
+			self:moveV()--为了使其立马掉下去，不至于因为水平速速过快而跨国砖块间隙
 		elseif self.m_fsm:getState() == "walkRight" then
-			print("有掉下去的趋势")
 			self:doEvent("goJumpRight",false)
+			self:moveV()--为了使其立马掉下去，不至于因为水平速速过快而跨国砖块间隙
 		end
 	end
 
@@ -112,10 +106,8 @@ function mariaAI:update()
     elseif self.m_fsm:getState() == "walkLeft" then
     	self:moveH()
     elseif self.m_fsm:getState() == "walkRight" then
-    	print("走路右移")
-    	sdfgh = true
+    	-- print("走路右移")
     	self:moveH()
-    	sdfgh = false
     elseif self.m_fsm:getState() == "jumpUp" then
     	if self.isJumpOver then		--跳完到达地面
     		self:doEvent("goStanding")
@@ -127,59 +119,45 @@ function mariaAI:update()
     	end
     elseif self.m_fsm:getState() == "jumpLeft" then
     	if self.m_oldCommond == OldCommond.walkLeft then
-    		print("左跳，左移")
+    		-- print("左跳，左移")
 	    	self:moveH()
 	    else
-	    	print("左跳转为直跳")
+	    	-- print("左跳转为直跳")
 	    	self:doEvent("goJumpUp",false)  --跳到空中，中途松开向左按钮
 	    	return
 	    end
     	if self.isJumpOver then		--跳完到达地面
-    		print("左跳到达地面")
+    		-- print("左跳到达地面")
 	    	self:doEvent("goWalkLeft")
 	    	if isJumpBtnDown then		--返回地面后，如果跳跃按钮还没松开，则继续跳
     			self:doEvent("goJumpLeft")  
     		end
     	else
-    		print("左跳，上下移")
+    		-- print("左跳，上下移")
     		self:moveV()
     	end
     elseif self.m_fsm:getState() == "jumpRight" then
     	if self.m_oldCommond == OldCommond.walkRight then
-    		print("右跳，右移")
-    		sdfgh = true
+    		-- print("右跳，右移")
 	    	self:moveH()--jumpRight状态","水平移动
-	    	sdfgh = false
 	    else
-	    	print("右跳转为直跳")
+	    	-- print("右跳转为直跳")
 	    	self:doEvent("goJumpUp",false)	--跳到空中，中途松开向右按钮
 	    	return
 	    end
     	if self.isJumpOver then		--跳完到达地面
-    		print("右跳到达地面")
+    		-- print("右跳到达地面")
 	    	self:doEvent("goWalkRight")
 	    	if isJumpBtnDown then
     			self:doEvent("goJumpRight")  --返回地面后，如果跳跃按钮还没松开，则继续跳
     		end
     	else
-    		print("右跳，上下移")
-    		--self:moveV()--jumpRight状态","垂直移动
-    		local pt_2 = self:getPtRightDown()
-			local _map = self:getMap()
-			local mapX,mapY = _map:getPosition()
-			pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
-			print("------".."x:"..pt_2.x.." y:"..pt_2.y)
-			jklh = true
-    		self:moveV()
-    		jklh = false
-    		local pt_3 = self:getPtRightDown()
-			_map = self:getMap()
-			mapX,mapY = _map:getPosition()
-			pt_3 = cc.p((pt_3.x - mapX),(pt_3.y - mapY))
-			print("------------".."x:"..pt_3.x.." y:"..pt_3.y)
+    		-- print("右跳，上下移")
+    		self:moveV()--jumpRight状态","垂直移动
+    		
     	end
     end
-    print("----------------结束")
+    -- print("----------------结束")
 end
 
 function mariaAI:addStateMachine()
@@ -237,40 +215,40 @@ function mariaAI:doEvent(event, ...)
 end
 
 function mariaAI:standing()
-	self:playAni(aniType.standing)
+	mariaAI.super.standing(self)
 end
 
 function mariaAI:walkLeft()
-	self:playAni(aniType.walk)
+	mariaAI.super.walkLeft(self)
 end
 
 function mariaAI:walkRight()
-	self:playAni(aniType.walk)
+	mariaAI.super.walkRight(self)
 end
 --如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
 function mariaAI:jumpUp(event)
+	mariaAI.super.jumpUp(self)
 	if event.args[1]==nil or event.args[1] then
 		self.m_vSpeed = self:getPramas("max_v_speed")
 	end
-	self:playAni(aniType.jump)
 end
 --如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
 function mariaAI:jumpLeft(event)
+	mariaAI.super.jumpLeft(self)
 	if event.args[1]==nil or event.args[1] then
 		self.m_vSpeed = self:getPramas("max_v_speed")
 	end
-	self:playAni(aniType.jump)
 end
 --如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
 function mariaAI:jumpRight(event)
+	mariaAI.super.jumpRight(self)
 	if event.args[1]==nil or event.args[1] then
 		self.m_vSpeed = self:getPramas("max_v_speed")
 	end
-	self:playAni(aniType.jump)
 end
 
 function mariaAI:walkDown()
-	self:playAni(aniType.down)
+	mariaAI.super.walkDown(self)
 end
 
 function mariaAI:onKeyPressed(keyCode,event)

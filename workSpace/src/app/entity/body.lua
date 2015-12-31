@@ -8,6 +8,14 @@ H_DirectionType = {}
 H_DirectionType.left = -1
 H_DirectionType.right = 1
 
+aniType = {}
+aniType.standing = 1
+aniType.walk = 2
+aniType.jump = 3
+aniType.die = 4
+aniType.fire = 5
+aniType.down = 6
+
 local MAX_H_SPEED_MARIA = 5				--水平方向最大速度
 local ACC_H_MARIA = 0.1					--水平方向加速度
 local MAX_V_SPEED_MARIA = 12            --最大垂直速度
@@ -125,9 +133,7 @@ function body:adjustOffsetX()
 			realPtX = tileNum * _map.tileSize.width + _map.tileSize.width	--进一
 			ptX = realPtX + mapPtX - rect.width/2
 		end--如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
-		-- if not self:bIsMaria() then
-		-- 	print("444,设置x,",ptX)
-		-- end
+
 		self:setPositionX(ptX)
 	elseif self.m_direction == H_DirectionType.left then	--向左移动时
 		realPtX = ptX -mapPtX - rect.width/2	--先得到玛丽的左边界在地图上的x坐标
@@ -202,9 +208,7 @@ function body:moveH()
 	if self:bIsMaria() then
 		_map:setPositionX(mapPtX)
 	end
-	if sdfgh then
-		print("_bIsCollision: ",_bIsCollision,self:getPtRightDown().x-mapPtX,self:getPtRightDown().y-_map:getPositionY())
-	end
+	
 	--如果碰到障碍物，要微调
 	if _bIsCollision then
 		--撞到障碍物时，对横坐标进行微调
@@ -214,6 +218,7 @@ function body:moveH()
 		return
 	end
 	_moveH()
+
 end
 
 function body:moveV()
@@ -281,10 +286,7 @@ function body:moveV()
 	if self:bIsMaria() then
 		_map:setPositionY(mapPtY)
 	end
-	if jklh then
-		print("竖直_bIsCollision: ",_bIsCollision,self:getPtRightDown().x-_map:getPositionX(),self:getPtRightDown().y-mapPtY,self.m_vSpeed)
-	end
-	-- if not self:bIsMaria() then print("_bIsCollision: ",_bIsCollision) end
+
 	if _bIsCollision then
 		if self.m_vSpeed >=0 then  --向上遇到障碍，向下反弹
 			self.m_vSpeed = 0 - self.m_vSpeed
@@ -297,10 +299,6 @@ function body:moveV()
 			local _tab = {_map:tilecoordToPosition(_tilePt)}
 			local _realPtY = _tab[2].y + mapPtY
 			self:setPositionY(_realPtY)			--对y坐标进行微调，使脚下始终刚好在一个块上面
-			-- if not self:bIsMaria() then 
-			-- 	print("_tilePt.x: ",_tilePt.x,"_tilePt.y: ",_tilePt,"_realPtY: ",_realPtY) 
-			-- 	printTable(_tab)
-			-- end
 		end
 		return
 	end
@@ -360,17 +358,14 @@ function body:ifCollistionV(bValue)
 	pt_1 = _map:positionToTileCoord(pt_1,{x=1,y = _y})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x=-1,y = _y})
 	pt_3 = _map:positionToTileCoord(pt_3,{x = _x})
-	-- print("pt_1:",pt_1,"pt_2:",pt_2,"pt_3:",pt_3)
+
 	if self:isColliSionTile(pt_1) then
-		-- if not self:bIsMaria() then print("pt_1.y: ",pt_1.y) end
 		return true,pt_1
 	end
 	if self:isColliSionTile(pt_2) then
-		-- if not self:bIsMaria() then print("pt_2.y: ",pt_2.y) end
 		return true,pt_2
 	end
 	if self:isColliSionTile(pt_3) then
-		-- if not self:bIsMaria() then print("pt_3.y: ",pt_3.y) end
 		return true,pt_3
 	end
 	return false
@@ -387,9 +382,14 @@ function body:ifCollistionH()
 		pt_2 = self:getPtRightDown()
 		pt_1.x = pt_1.x+_offX
 		pt_2.x = pt_2.x+_offX
-
-		if pt_1.x>=display.width then				--首先判断是否到了边界
-			return true
+		if self:bIsMaria() then
+			if pt_1.x>=display.width then				--首先判断是否到了边界
+				return true
+			end
+		else
+			if pt_1.x>=_map.mapSize.width*_map.tileSize.width then
+				return true
+			end
 		end
 	else
 		pt_1 = self:getPtLeftTop()			--需要检测的有左上和左下边界
@@ -406,9 +406,7 @@ function body:ifCollistionH()
 		pt_1 = cc.p((pt_1.x - mapX),(pt_1.y - mapY))  --得到玛丽在地图上的像素坐标
 		pt_2 = cc.p((pt_2.x - mapX),(pt_2.y - mapY))
 	end
-	if sdfgh then
-		print("像素pt_2: ",pt_2.x,pt_2.y)
-	end
+
 	local _x 
 	if _bol then 
 		_x = 1		--如果方向为向右，则在两块之间时得到右面的块
@@ -420,20 +418,11 @@ function body:ifCollistionH()
 	pt_1 = _map:positionToTileCoord(pt_1,{x = _x,y=-1})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x = _x,y=1})
 	pt_3 = _map:positionToTileCoord(pt_3,{x = _x})
-
-	if sdfgh then
-		print("块pt_2: ",pt_2.x,pt_2.y)
-	end
 	
 	if self:isColliSionTile(pt_1) or self:isColliSionTile(pt_2) or self:isColliSionTile(pt_3) then
-		if sdfgh then
-			print(self:isColliSionTile(pt_1),self:isColliSionTile(pt_2),self:isColliSionTile(pt_3))
-		end
 		return true
 	end
-	if sdfgh then
-		print("返回false")
-	end
+
 	return false
 end
 
@@ -467,5 +456,34 @@ function body:getPtRightDown()
 	position.x = position.x + rect.width /2
 	return position
 end
+
+function body:standing()
+	self:playAni(aniType.standing)
+end
+
+function body:walkLeft()
+	self:playAni(aniType.walk)
+end
+
+function body:walkRight()
+	self:playAni(aniType.walk)
+end
+
+function body:jumpUp(event)
+	self:playAni(aniType.jump)
+end
+
+function body:jumpLeft(event)
+	self:playAni(aniType.jump)
+end
+--如果第一个参数为false,则表示垂直方向速度不重置为最大树脂速度，即竖直方向做抛物线运动
+function body:jumpRight(event)
+	self:playAni(aniType.jump)
+end
+
+function body:walkDown()
+	self:playAni(aniType.down)
+end
+
 
 return body
