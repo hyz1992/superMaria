@@ -6,19 +6,19 @@ function monster_mushroom:ctor(objectTab)
 	monster_mushroom.super.ctor(self)
 	self._obj = objectTab
 	self._spr:setSpriteFrame("img_33.png")
-	-- print("self._spr: ",self._spr)
-	-- print(objectTab.x,objectTab.y)
 	self._spr:align(display.CENTER_BOTTOM,self:getContentSize().width/2,0)
+	
 	local _pos = cc.p(objectTab.x+8,objectTab.y-8+200)
 	self:setPosition(_pos)
 
 	self:addStateMachine()
     self:onUpdate(handler(self,self.update))
-
+-- self._updateHandle = scheduler.scheduleUpdateGlobal(handler(self,self.update))
     self:doEvent("goWalkLeft")
 end
 
-function monster_mushroom:update()
+function monster_mushroom:update(dt)
+	monster_mushroom.super.update(self)
 	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
 	-- print("state: ",self.m_fsm:getState(),"_bIsCollision: ",_bIsCollision,"self.isJumpOver: ",self.isJumpOver)
 	if not _bIsCollision then
@@ -118,6 +118,30 @@ function monster_mushroom:playAni(_type)
 		self._spr:runAction(cc.RepeatForever:create(sq))
 	else
 		self._spr:setSpriteFrame("img_33.png")
+	end
+end
+
+function monster_mushroom:onEnter()
+	monster_mushroom.super.onEnter(self)
+end
+
+function monster_mushroom:onExit()
+	print("=======ooo,蘑菇onexit")
+	monster_mushroom.super.onExit(self)
+end
+
+--被碰撞
+--body，与谁相碰撞
+--direction,self的那个方向被碰撞,1:上，2:下，3:左，4:右
+function monster_mushroom:isHited(body,direction)
+	monster_mushroom.super.isHited(self,body,direction)
+	if body:bIsMaria() and direction ==1 then
+		self:unscheduleUpdate()
+		self.xcvbvcxx = true
+		print("==============ooooo,removeself")
+		scheduler.performWithDelayGlobal(function ()
+			self:removeSelf()
+		end,0.01)
 	end
 end
 

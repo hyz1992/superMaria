@@ -28,6 +28,7 @@ function mariaAI:ctor(...)
 
     self:addStateMachine()
     self:onUpdate(handler(self,self.update))
+    -- self._updateHandle = scheduler.scheduleUpdateGlobal(handler(self,self.update))
 end
 
 function mariaAI:onExit()
@@ -81,6 +82,7 @@ function mariaAI:playAni(_type)
 end
 
 function mariaAI:update()
+	mariaAI.super.update(self)
 	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
 	local pt_2 = self:getPtRightDown()
 	local _map = self:getMap()
@@ -300,6 +302,21 @@ function mariaAI:onKeyReleased(keyCode,event)
         print("cccccccccccccccccccccc")
         self:doEvent("goStanding")
     end
+end
+
+--被碰撞
+--body，与谁相碰撞
+--direction,self的那个方向被碰撞,1:上，2:下，3:左，4:右
+function mariaAI:isHited(body,direction)
+	mariaAI.super.isHited(self,body,direction)
+	-- printTraceback()
+	-- print("mariaAI=================ddddddd",direction)
+	local name = body.__cname
+	if name== "monster_mushroom" then
+		self:setColor(cc.c3b(255,0,0))
+	elseif name== "monster_tortoise" then
+		self:setColor(cc.c3b(0,255,0))
+	end
 end
 
 return mariaAI

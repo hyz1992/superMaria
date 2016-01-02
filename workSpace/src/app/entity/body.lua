@@ -1,8 +1,11 @@
 local body = class("body",function ( ... )
 	local node = display.newNode()
+	node:enableNodeEvents()
 	node:setAnchorPoint(0,0)
 	return node
 end)
+
+allBodyList = {}
 
 H_DirectionType = {}
 H_DirectionType.left = -1
@@ -16,7 +19,7 @@ aniType.die = 4
 aniType.fire = 5
 aniType.down = 6
 
-local MAX_H_SPEED_MARIA = 5				--水平方向最大速度
+local MAX_H_SPEED_MARIA = 4				--水平方向最大速度
 local ACC_H_MARIA = 0.1					--水平方向加速度
 local MAX_V_SPEED_MARIA = 12            --最大垂直速度
 local ACC_V_MARIA = 0.5					--垂直加速度
@@ -28,6 +31,12 @@ local MAX_V_SPEED_MONSTAR_1 = 7            --最大垂直速度
 local ACC_V_MONSTAR_1 = 0.5					--垂直加速度
 local START_H_SPEED_MONSTAR_1 = 1			--水平方向初始速度
 
+local MAX_H_SPEED_MONSTAR_2 = 1.1				--水平方向最大速度
+local ACC_H_MONSTAR_2 = 0.1					--水平方向加速度
+local MAX_V_SPEED_MONSTAR_2 = 7            --最大垂直速度
+local ACC_V_MONSTAR_2 = 0.5					--垂直加速度
+local START_H_SPEED_MONSTAR_2 = 1			--水平方向初始速度
+
 
 function body:setSpeed()
 	local name = self.__cname
@@ -37,12 +46,19 @@ function body:setSpeed()
 		self.MAX_V_SPEED = MAX_V_SPEED_MARIA
 		self.ACC_V = ACC_V_MARIA
 		self.START_H_SPEED = START_H_SPEED_MARIA
-	else
+	elseif name=="monster_mushroom" then
 		self.MAX_H_SPEED = MAX_H_SPEED_MONSTAR_1
 		self.ACC_H = ACC_H_MONSTAR_1
 		self.MAX_V_SPEED = MAX_V_SPEED_MONSTAR_1
 		self.ACC_V = ACC_V_MONSTAR_1
 		self.START_H_SPEED = START_H_SPEED_MONSTAR_1
+		return false
+	elseif name=="monster_tortoise" then
+		self.MAX_H_SPEED = MAX_H_SPEED_MONSTAR_2
+		self.ACC_H = ACC_H_MONSTAR_2
+		self.MAX_V_SPEED = MAX_V_SPEED_MONSTAR_2
+		self.ACC_V = ACC_V_MONSTAR_2
+		self.START_H_SPEED = START_H_SPEED_MONSTAR_2
 		return false
 	end
 end
@@ -100,6 +116,7 @@ function body:ctor( ... )
 	self.isJumpOver = false						--是否跳跃完毕
 	self:changeDirection(H_DirectionType.right)
 	
+
 end
 
 function body:changeDirection(_direction)
@@ -107,8 +124,23 @@ function body:changeDirection(_direction)
 	self._spr:setScale(self.m_direction,1)
 end
 
+function body:update( ... )
+	self:checkIsHit()
+end
+
+function body:onEnter()
+	table.insert(allBodyList,self)self.bIsDead = false
+end
+
 function body:onExit()
-	
+	print("=======ooo,bodyLonexit")
+	self.bIsDead = true
+	self:unscheduleUpdate()
+	for k,v in pairs(allBodyList) do
+		if v==self then
+			allBodyList[k] = nil
+		end
+	end
 end
 
 --水平方向移动碰到障碍物时，对玛丽x坐标进行微调，保证玛丽不与障碍物交叉
@@ -485,5 +517,115 @@ function body:walkDown()
 	self:playAni(aniType.down)
 end
 
+--被碰撞
+--body，与谁相碰撞
+--direction,self的那个方向被碰撞,1:上，2:下，3:左，4:右
+function body:isHited(body,direction)
+	-- cc.Director:getInstance():pause()
+	-- printTraceback()
+end
+
+function body:checkIsHit()
+	--print("=================gggggggggggg",self.__cname)
+	for k,v in pairs(allBodyList) do
+		if v~=self then
+			
+			local minX_1 = self:getPtLeftDown().x
+			local minY_1 = self:getPtLeftDown().y
+			local maxX_1 = self:getPtRightTop().x
+			local maxY_1 = self:getPtRightTop().y
+
+			local minX_2 = v:getPtLeftDown().x
+			local minY_2 = v:getPtLeftDown().y
+			local maxX_2 = v:getPtRightTop().x
+			local maxY_2 = v:getPtRightTop().y
+
+			local _map = self:getMap()
+			local _mapPtX = _map:getPositionX()
+			local _mapPtY = _map:getPositionY()
+			if self:bIsMaria() then
+				minX_1 = minX_1 - _mapPtX
+				maxX_1 = maxX_1 - _mapPtX
+				minY_1 = minY_1 - _mapPtY
+				maxY_1 = maxY_1 - _mapPtY
+			end
+			if v:bIsMaria() then
+				minX_2 = minX_2 - _mapPtX
+				maxX_2 = maxX_2 - _mapPtX
+				minY_2 = minY_2 - _mapPtY
+				maxY_2 = maxY_2 - _mapPtY
+			end
+
+			local minPt = cc.p((minX_2+maxX_2)/2,(minY_2+maxY_2)/2)
+			local rect = self._spr:getBoundingBox()
+			rect.x = minX_1
+			rect.y = minY_1
+
+			local x_speed_1 = self.m_speed
+			local y_speed_1 = self.m_vSpeed
+
+			local x_speed_2 = v.m_speed
+			local y_speed_2 = v.m_vSpeed
+
+			local function _xxxx( tag )
+				-- if self:bIsMaria() then
+				-- 	print(tag,"==============---------",self:getPositionX(),self:getPositionY(),rect.width,rect.height)
+				-- 	print(" minX_1: "..minX_1.." minY_1: "..minY_1.." maxX_1: "..maxX_1.." maxY_1: "..maxY_1)
+				-- 	print(" minX_2: "..minX_2.." minY_2: "..minY_2.." maxX_2: "..maxX_2.." maxY_2: "..maxY_2)
+				-- 	-- cc.Director:getInstance():pause()
+				-- end
+			end
+			-- if self:bIsMaria() then
+			-- 	print("---------------------start")
+			-- 	print(minY_2>minY_1 and minY_2<maxY_1,minX_2>minX_1 and minX_2<maxX_1,maxX_2>minX_1 and maxX_2<maxX_1)
+			-- 	_xxxx()
+			-- 	print("-------------------------------end")
+			-- end
+			if minY_2>minY_1 and minY_2<maxY_1 and ((minX_2>minX_1 and minX_2<maxX_1) or (maxX_2>minX_1 and maxX_2<maxX_1) or (minX_2>minX_1 and maxX_2<maxX_1) or (minX_2<minX_1 and maxX_2>maxX_1)) then --与上边碰撞
+				
+				if y_speed_1>0 or y_speed_2<0 then
+					self:isHited(v,1)
+					_xxxx(1)
+					return
+				end
+			end
+			if maxY_2>minY_1 and maxY_2<maxY_1 and ((minX_2>minX_1 and minX_2<maxX_1) or (maxX_2>minX_1 and maxX_2<maxX_1) or (minX_2>minX_1 and maxX_2<maxX_1) or (minX_2<minX_1 and maxX_2>maxX_1)) then --与下边碰撞
+				if y_speed_1<0 or y_speed_2>0 then
+					self:isHited(v,2)
+					_xxxx(2)
+					return
+				end
+			end
+			
+			if maxX_2>minX_1 and maxX_2<maxX_1 and ((minY_2>minY_1 and minY_2<maxY_1) or (maxY_2>minY_1 and maxY_2<maxY_1) or (minY_2>minY_1 and maxY_2<maxY_1) or (minY_2<minY_1 and maxY_2>maxY_1)) then --与左边碰撞
+				-- print("x_speed_1:",x_speed_1,"x_speed_2:",x_speed_2)
+				if x_speed_1<0 or x_speed_2>0 then
+					self:isHited(v,3)
+					_xxxx(3)
+					return
+				end
+			end
+			if minX_2>minX_1 and minX_2<maxX_1 and ((minY_2>minY_1 and minY_2<maxY_1) or (maxY_2>minY_1 and maxY_2<maxY_1) or (minY_2>minY_1 and maxY_2<maxY_1) or (minY_2<minY_1 and maxY_2>maxY_1)) then --与右边碰撞
+				if x_speed_1>0 or x_speed_2<0 then
+					self:isHited(v,4)
+					_xxxx(4)
+					return
+				end
+			end
+
+			if cc.rectContainsPoint(rect,minPt) then --因为速度太快而被包进去，无法判断方向的时候
+				if self:bIsMaria() then
+					print("------------------------")
+					printTable(rect)
+					print("\n")
+					printTable(minPt)
+				end
+				self:isHited(v,0)
+				return
+			end
+			
+		end
+	end
+end
 
 return body
