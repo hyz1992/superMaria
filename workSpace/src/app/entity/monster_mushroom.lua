@@ -12,8 +12,8 @@ function monster_mushroom:ctor(objectTab)
 	self:setPosition(_pos)
 
 	self:addStateMachine()
-    self:onUpdate(handler(self,self.update))
--- self._updateHandle = scheduler.scheduleUpdateGlobal(handler(self,self.update))
+    -- self:onUpdate(handler(self,self.update))
+
     self:doEvent("goWalkLeft")
 end
 

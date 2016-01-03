@@ -141,6 +141,7 @@ function body:onExit()
 			allBodyList[k] = nil
 		end
 	end
+	self = nil
 end
 
 --水平方向移动碰到障碍物时，对玛丽x坐标进行微调，保证玛丽不与障碍物交叉

@@ -120,7 +120,7 @@ function gameLayer:onKeyReleased(keyCode,event)
 end
 
 function gameLayer:onEnter()
-    --print("--pppppppp------------------")
+    self:onUpdate(handler(self,self.update))
     local _tab_1 = self.m_map.m_objectGroup:getObjects()
     --print(type(_tab_1))
     for k,v in pairs(_tab_1) do
@@ -137,6 +137,12 @@ end
 function gameLayer:onExit()
     display.removeSpriteFrame("mariaObj.plist")
     display.removeSpriteFrame("control.plist")
+end
+
+function gameLayer:update(dt)
+    for k,v in pairs(allBodyList) do
+        v:update(dt)
+    end
 end
 
 return gameLayer

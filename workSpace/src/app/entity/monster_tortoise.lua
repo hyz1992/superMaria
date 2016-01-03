@@ -12,7 +12,6 @@ function monster_tortoise:ctor(objectTab)
 	self:setPosition(_pos)
 
 	self:addStateMachine()
-    self:onUpdate(handler(self,self.update))
 
     self:doEvent("goWalkLeft")
 end
