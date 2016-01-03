@@ -129,19 +129,24 @@ function body:update( ... )
 end
 
 function body:onEnter()
-	table.insert(allBodyList,self)self.bIsDead = false
+	table.insert(allBodyList,self)
 end
 
 function body:onExit()
 	print("=======ooo,bodyLonexit")
-	self.bIsDead = true
 	self:unscheduleUpdate()
+	print("----------------1111")
+	printTable(allBodyList)
 	for k,v in pairs(allBodyList) do
 		if v==self then
 			allBodyList[k] = nil
 		end
 	end
 	self = nil
+	print("----------------2222")
+	printTable(allBodyList)
+	print("----------------3333")
+
 end
 
 --水平方向移动碰到障碍物时，对玛丽x坐标进行微调，保证玛丽不与障碍物交叉
@@ -251,7 +256,6 @@ function body:moveH()
 		return
 	end
 	_moveH()
-
 end
 
 function body:moveV()
@@ -526,10 +530,20 @@ function body:isHited(body,direction)
 	-- printTraceback()
 end
 
+function body:bIsInScreen()
+	local pt = cc.p(self._spr:getContentSize().width,self._spr:getContentSize().height)
+	pt = self._spr:convertToWorldSpace(pt)
+	local rect = cc.rect(0,0,display.width,display.height)
+	return cc.rectContainsPoint(rect,pt)
+end
+
 function body:checkIsHit()
 	--print("=================gggggggggggg",self.__cname)
+	if not self:bIsInScreen() then
+		return
+	end
 	for k,v in pairs(allBodyList) do
-		if v~=self then
+		if v~=self and v:bIsInScreen() then
 			
 			local minX_1 = self:getPtLeftDown().x
 			local minY_1 = self:getPtLeftDown().y

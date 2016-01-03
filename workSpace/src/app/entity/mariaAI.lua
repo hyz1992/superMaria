@@ -27,8 +27,7 @@ function mariaAI:ctor(...)
 	self.m_mariaType = MariaType.fire			--当前玛丽的类型
 
     self:addStateMachine()
-    self:onUpdate(handler(self,self.update))
-    -- self._updateHandle = scheduler.scheduleUpdateGlobal(handler(self,self.update))
+    
 end
 
 function mariaAI:onExit()

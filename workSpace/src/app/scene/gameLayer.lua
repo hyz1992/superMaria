@@ -140,7 +140,10 @@ function gameLayer:onExit()
 end
 
 function gameLayer:update(dt)
+    -- printTable(allBodyList)
     for k,v in pairs(allBodyList) do
+        -- print("pppppppppppppppp")
+        -- print("==------------",k,v)
         v:update(dt)
     end
 end

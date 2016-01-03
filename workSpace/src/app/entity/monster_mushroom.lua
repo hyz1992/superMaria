@@ -12,7 +12,6 @@ function monster_mushroom:ctor(objectTab)
 	self:setPosition(_pos)
 
 	self:addStateMachine()
-    -- self:onUpdate(handler(self,self.update))
 
     self:doEvent("goWalkLeft")
 end
@@ -136,12 +135,11 @@ end
 function monster_mushroom:isHited(body,direction)
 	monster_mushroom.super.isHited(self,body,direction)
 	if body:bIsMaria() and direction ==1 then
-		self:unscheduleUpdate()
-		self.xcvbvcxx = true
+		-- self:unscheduleUpdate()
 		print("==============ooooo,removeself")
-		scheduler.performWithDelayGlobal(function ()
+		-- scheduler.performWithDelayGlobal(function ()
 			self:removeSelf()
-		end,0.01)
+		-- end,0.01)
 	end
 end
 
