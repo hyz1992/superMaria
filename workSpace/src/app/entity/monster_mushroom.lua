@@ -135,11 +135,19 @@ end
 function monster_mushroom:isHited(body,direction)
 	monster_mushroom.super.isHited(self,body,direction)
 	if body:bIsMaria() and direction ==1 then
-		-- self:unscheduleUpdate()
-		print("==============ooooo,removeself")
-		-- scheduler.performWithDelayGlobal(function ()
+		self:goDead(1)
+	end
+end
+
+--tag标志,1:被踩死,2:被子弹打死
+function monster_mushroom:goDead(tag)
+	if tag==1 then
+		self:clearSelf()
+		self:setScaleY(0.5)
+		local sq = transition.sequence{cc.FadeIn:create(0.5),cc.CallFunc:create(function ()
 			self:removeSelf()
-		-- end,0.01)
+		end)}
+		self:runAction(sq)
 	end
 end
 

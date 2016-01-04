@@ -132,21 +132,16 @@ function body:onEnter()
 	table.insert(allBodyList,self)
 end
 
-function body:onExit()
-	print("=======ooo,bodyLonexit")
-	self:unscheduleUpdate()
-	print("----------------1111")
-	printTable(allBodyList)
+function body:clearSelf()
 	for k,v in pairs(allBodyList) do
 		if v==self then
 			allBodyList[k] = nil
 		end
 	end
-	self = nil
-	print("----------------2222")
-	printTable(allBodyList)
-	print("----------------3333")
+end
 
+function body:onExit()
+	
 end
 
 --水平方向移动碰到障碍物时，对玛丽x坐标进行微调，保证玛丽不与障碍物交叉
@@ -600,6 +595,7 @@ function body:checkIsHit()
 				
 				if y_speed_1>0 or y_speed_2<0 then
 					self:isHited(v,1)
+					v:isHited(self,2)
 					_xxxx(1)
 					return
 				end
@@ -607,6 +603,7 @@ function body:checkIsHit()
 			if maxY_2>minY_1 and maxY_2<maxY_1 and ((minX_2>minX_1 and minX_2<maxX_1) or (maxX_2>minX_1 and maxX_2<maxX_1) or (minX_2>minX_1 and maxX_2<maxX_1) or (minX_2<minX_1 and maxX_2>maxX_1)) then --与下边碰撞
 				if y_speed_1<0 or y_speed_2>0 then
 					self:isHited(v,2)
+					v:isHited(self,1)
 					_xxxx(2)
 					return
 				end
@@ -616,6 +613,7 @@ function body:checkIsHit()
 				-- print("x_speed_1:",x_speed_1,"x_speed_2:",x_speed_2)
 				if x_speed_1<0 or x_speed_2>0 then
 					self:isHited(v,3)
+					v:isHited(self,4)
 					_xxxx(3)
 					return
 				end
@@ -623,6 +621,7 @@ function body:checkIsHit()
 			if minX_2>minX_1 and minX_2<maxX_1 and ((minY_2>minY_1 and minY_2<maxY_1) or (maxY_2>minY_1 and maxY_2<maxY_1) or (minY_2>minY_1 and maxY_2<maxY_1) or (minY_2<minY_1 and maxY_2>maxY_1)) then --与右边碰撞
 				if x_speed_1>0 or x_speed_2<0 then
 					self:isHited(v,4)
+					v:isHited(self,3)
 					_xxxx(4)
 					return
 				end
@@ -630,10 +629,10 @@ function body:checkIsHit()
 
 			if cc.rectContainsPoint(rect,minPt) then --因为速度太快而被包进去，无法判断方向的时候
 				if self:bIsMaria() then
-					print("------------------------")
-					printTable(rect)
-					print("\n")
-					printTable(minPt)
+					-- print("------------------------")
+					-- printTable(rect)
+					-- print("\n")
+					-- printTable(minPt)
 				end
 				self:isHited(v,0)
 				return

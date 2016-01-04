@@ -21,7 +21,6 @@ function mariaAI:ctor(...)
 	mariaAI.super.ctor(self,...)
 	display.loadSpriteFrames("mario.plist","mario.png")
 
-	print("================================self.m_vSpeed: ",self.m_vSpeed)
 	self.m_oldCommond = OldCommond.standing     --用于判断跳跃过程中的水平前进方向
 	
 	self.m_mariaType = MariaType.fire			--当前玛丽的类型
@@ -36,8 +35,11 @@ function mariaAI:onExit()
 end
 
 function mariaAI:playAni(_type)
-	-- _type = aniType.standing
-	--print(_type)
+	if _type~=nil then
+		self.m_curMariaType = _type
+	else
+		_type = self.m_curMariaType
+	end
 	self._spr:stopAllActions()
 	if self.m_mariaType == MariaType.small then
 		if aniType.walk == _type then
@@ -176,9 +178,9 @@ function mariaAI:addStateMachine()
             {name = "goStanding",  from = {"walkLeft","walkRight","jumpUp","jumpLeft","jumpRight"}, to = "standing" },
             {name = "goWalkLeft",  from = {"standing","walkRight","jumpLeft"}, to = "walkLeft" },
             {name = "goWalkRight",  from = {"standing","walkLeft","jumpRight"}, to = "walkRight" },
-            {name = "goJumpUp",  from = {"standing","jumpLeft","jumpRight"}, to = "jumpUp" },
-            {name = "goJumpLeft",  from = {"walkLeft","jumpUp"}, to = "jumpLeft" },
-            {name = "goJumpRight",  from = {"walkRight","jumpUp"}, to = "jumpRight" },
+            {name = "goJumpUp",  from = {"standing","jumpLeft","jumpRight","jumpUp"}, to = "jumpUp" },
+            {name = "goJumpLeft",  from = {"walkLeft","jumpUp","jumpLeft"}, to = "jumpLeft" },
+            {name = "goJumpRight",  from = {"walkRight","jumpUp","jumpRight"}, to = "jumpRight" },
             {name = "goWalkDown",  from = {"standing"}, to = "walkDown" },
             
         }, 
@@ -309,12 +311,32 @@ end
 function mariaAI:isHited(body,direction)
 	mariaAI.super.isHited(self,body,direction)
 	-- printTraceback()
-	-- print("mariaAI=================ddddddd",direction)
 	local name = body.__cname
 	if name== "monster_mushroom" then
-		self:setColor(cc.c3b(255,0,0))
+		if direction==2 then
+			self.m_vSpeed = self:getPramas("max_v_speed")/2
+			if self.m_fsm:getState()=="jumpUp" then
+				self:doEvent("goJumpUp",false)
+			elseif self.m_fsm:getState()=="jumpLeft" then
+				self:doEvent("goJumpLeft",false)
+			elseif self.m_fsm:getState()=="jumpRight" then
+				self:doEvent("goJumpRight",false)
+			end
+		elseif direction==1 or direction==3 or direction==4 then
+			self:goDead(1)
+		end
 	elseif name== "monster_tortoise" then
 		self:setColor(cc.c3b(0,255,0))
+	end
+end
+
+--tag标志位，	
+--1:被怪物碰到，掉一滴血
+--2:掉进陷阱，一命呜呼				
+function mariaAI:goDead(tag)
+	if tag==1 then
+		self.m_mariaType = MariaType.big
+		self:playAni()
 	end
 end
 
