@@ -17,6 +17,9 @@ function monster_mushroom:ctor(objectTab)
 end
 
 function monster_mushroom:update(dt)
+	if not self:bIsInScreen() then
+		return
+	end
 	monster_mushroom.super.update(self)
 	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
 	-- print("state: ",self.m_fsm:getState(),"_bIsCollision: ",_bIsCollision,"self.isJumpOver: ",self.isJumpOver)
@@ -144,9 +147,11 @@ function monster_mushroom:goDead(tag)
 	if tag==1 then
 		self:clearSelf()
 		self:setScaleY(0.5)
-		local sq = transition.sequence{cc.FadeIn:create(0.5),cc.CallFunc:create(function ()
+		local fadeTime = 1
+		local sq = transition.sequence{cc.FadeOut:create(fadeTime),cc.CallFunc:create(function ()
 			self:removeSelf()
 		end)}
+		self._spr:runAction(cc.FadeOut:create(fadeTime))
 		self:runAction(sq)
 	end
 end

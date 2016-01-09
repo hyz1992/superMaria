@@ -9,7 +9,7 @@ function parseTiledObject(objectTab)
 	if name == "Monster" then			--怪物
 		--print("Monster")
 		ret = createMonster(objectTab)
-		if ret._obj.x ~= 584 then
+		if ret._obj.x ~= 1448 then
 			-- ret = nil
 		end
 		-- ret = nil

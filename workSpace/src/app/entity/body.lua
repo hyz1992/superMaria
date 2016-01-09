@@ -65,12 +65,27 @@ end
 
 function body:getPramas(pramaType)
 	local name = self.__cname
-	if name=="mariaAI" then
-		if pramaType=="max_v_speed" then
-			return self.MAX_V_SPEED
-		elseif pramaType=="max_h_speed" then
-			return self.MAX_H_SPEED
-		end
+	if pramaType=="max_v_speed" then
+		return self.MAX_V_SPEED
+	elseif pramaType=="max_h_speed" then
+		return self.MAX_H_SPEED
+	elseif pramaType=="m_speed" then
+		return self.m_speed
+	elseif pramaType=="acc_h" then
+		return self.ACC_H
+	end
+end
+
+function body:setPramas(pramaType,value)
+	local name = self.__cname
+	if pramaType=="max_v_speed" then
+		self.MAX_V_SPEED = value
+	elseif pramaType=="max_h_speed" then
+		self.MAX_H_SPEED = value
+	elseif pramaType=="m_speed" then
+		self.m_speed = value
+	elseif pramaType=="acc_h" then
+		self.ACC_H = value
 	end
 end
 
@@ -526,10 +541,20 @@ function body:isHited(body,direction)
 end
 
 function body:bIsInScreen()
-	local pt = cc.p(self._spr:getContentSize().width,self._spr:getContentSize().height)
+	local pt = cc.p(0,0)
 	pt = self._spr:convertToWorldSpace(pt)
-	local rect = cc.rect(0,0,display.width,display.height)
-	return cc.rectContainsPoint(rect,pt)
+	-- local _map = self:getMap()
+	-- local _mapPtX = _map:getPositionX()
+	-- local _mapPtY = _map:getPositionY()
+	-- pt.x = pt.x + _mapPtX
+	-- pt.y = pt.y + _mapPtY
+	local offSet = 50
+	local ret = pt.x>-offSet and pt.x<display.width+offSet and pt.y>-offSet and pt.y<display.height+offSet
+	-- if not self:bIsMaria() then
+	-- 	print("pt:",pt.x,pt.y)
+	-- 	print("ret",ret)
+	-- end
+	return ret
 end
 
 function body:checkIsHit()

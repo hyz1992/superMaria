@@ -17,6 +17,9 @@ function monster_tortoise:ctor(objectTab)
 end
 
 function monster_tortoise:update()
+	if not self:bIsInScreen() then
+		return
+	end
 	monster_tortoise.super.update(self)
 	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
 	-- print("state: ",self.m_fsm:getState(),"_bIsCollision: ",_bIsCollision,"self.isJumpOver: ",self.isJumpOver)
@@ -89,6 +92,7 @@ function monster_tortoise:addStateMachine()
 	})
 end
 
+
 function monster_tortoise:doEvent(event, ...)
 	if event == "goStanding" or event == "goWalkLeft" or event == "goWalkRight" then
 		self.m_vSpeed = 0
@@ -107,7 +111,9 @@ end
 
 function monster_tortoise:playAni(_type)
 	self._spr:stopAllActions()
-	if _type==aniType.walk then
+	if self.isVertigo then
+		self._spr:setSpriteFrame("img_38.png")
+	elseif _type==aniType.walk then
 		local animation = display.newAnimation("img_%02d.png",67,2,false,0.15)
 		local ani = cc.Animate:create(animation)
 		self._spr:runAction(cc.RepeatForever:create(ani))
@@ -116,9 +122,64 @@ function monster_tortoise:playAni(_type)
 	end
 end
 
+--direction,self的那个方向被碰撞,1:上，2:下，3:左，4:右
 function monster_tortoise:isHited(body,direction)
 	monster_tortoise.super.isHited(self,body,direction)
-	-- print("monster_tortoise=================ddddddd")
+	if body:bIsMaria() then
+		if direction ==1 then
+			if self.isVertigo then
+				local prama=3
+				if body.m_speed > 0 then
+					prama = 4
+				end
+				self:goDead(2)
+			else
+				self:goDead(1)
+			end
+		elseif direction==3 or direction==4 then
+			if self.isVertigo then
+				self:goDead(2,direction)
+			end
+		end
+		
+	end
+end
+
+function monster_tortoise:changeSpeed(tag)
+	local new_max_speed
+	local new_acc_h
+	if tag==1 then
+		new_max_speed = 4.5
+		new_acc_h = 4.5
+	elseif tag==2 then
+		new_max_speed = 1.1
+		new_acc_h = 0.1
+	end
+	self:setPramas("max_h_speed",new_max_speed)
+	self:setPramas("acc_h",new_acc_h)
+end
+
+--tag标志。1:被踩了第一脚，变成龟壳；2:被踩第二脚；3:被子弹打死
+function monster_tortoise:goDead(tag,prama)
+	if tag==1 then
+		self.isVertigo = true
+		self:doEvent("goStanding")
+	elseif tag==2 then
+		print("prama: ",prama)
+		if not self.slide then	--	没有在滑行，才能开始滑行
+			self:changeSpeed(1)
+			if prama==3 then
+				print("向左")
+				self:doEvent("goWalkRight")
+			else
+				print("向右")
+				self:doEvent("goWalkLeft")
+			end
+			self.slide = true
+		end
+	elseif tag==3 then
+		self:clearSelf()
+	end
 end
 
 return monster_tortoise

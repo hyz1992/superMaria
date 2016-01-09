@@ -175,7 +175,7 @@ function mariaAI:addStateMachine()
         
         -- 事件和状态转换
         events = {
-            {name = "goStanding",  from = {"walkLeft","walkRight","jumpUp","jumpLeft","jumpRight"}, to = "standing" },
+            {name = "goStanding",  from = {"walkLeft","walkRight","jumpUp","jumpLeft","jumpRight","standing"}, to = "standing" },
             {name = "goWalkLeft",  from = {"standing","walkRight","jumpLeft"}, to = "walkLeft" },
             {name = "goWalkRight",  from = {"standing","walkLeft","jumpRight"}, to = "walkRight" },
             {name = "goJumpUp",  from = {"standing","jumpLeft","jumpRight","jumpUp"}, to = "jumpUp" },
@@ -314,7 +314,7 @@ function mariaAI:isHited(body,direction)
 	local name = body.__cname
 	if name== "monster_mushroom" then
 		if direction==2 then
-			self.m_vSpeed = self:getPramas("max_v_speed")/2
+			self.m_vSpeed = -self.m_vSpeed/2
 			if self.m_fsm:getState()=="jumpUp" then
 				self:doEvent("goJumpUp",false)
 			elseif self.m_fsm:getState()=="jumpLeft" then
@@ -326,7 +326,18 @@ function mariaAI:isHited(body,direction)
 			self:goDead(1)
 		end
 	elseif name== "monster_tortoise" then
-		self:setColor(cc.c3b(0,255,0))
+		if direction==2 then
+			self.m_vSpeed = -self.m_vSpeed/2
+			if self.m_fsm:getState()=="jumpUp" then
+				self:doEvent("goJumpUp",false)
+			elseif self.m_fsm:getState()=="jumpLeft" then
+				self:doEvent("goJumpLeft",false)
+			elseif self.m_fsm:getState()=="jumpRight" then
+				self:doEvent("goJumpRight",false)
+			end
+		elseif direction==1 or direction==3 or direction==4 then
+			self:goDead(1)
+		end
 	end
 end
 
