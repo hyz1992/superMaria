@@ -182,4 +182,13 @@ function monster_tortoise:goDead(tag,prama)
 	end
 end
 
+--是否为可以攻击其他物种的状态
+function monster_tortoise:ifCanAttack()
+	if self.slide then
+		return true
+	else
+		return false
+	end
+end
+
 return monster_tortoise

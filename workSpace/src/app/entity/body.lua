@@ -557,9 +557,13 @@ function body:bIsInScreen()
 	return ret
 end
 
+--是否为可以攻击其他物种的状态
+function body:ifCanAttack()
+	return false
+end
+
 function body:checkIsHit()
-	--print("=================gggggggggggg",self.__cname)
-	if not self:bIsInScreen() then
+	if not self:ifCanAttack() or not self:bIsInScreen() then
 		return
 	end
 	for k,v in pairs(allBodyList) do

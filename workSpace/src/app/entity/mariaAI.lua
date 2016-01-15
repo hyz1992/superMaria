@@ -351,4 +351,9 @@ function mariaAI:goDead(tag)
 	end
 end
 
+--是否为可以攻击其他物种的状态
+function mariaAI:ifCanAttack()
+	return true
+end
+
 return mariaAI
