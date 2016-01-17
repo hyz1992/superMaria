@@ -4,7 +4,10 @@ local mariaAI = require("app.entity.mariaAI")
 
 local gameLayer = class("gameLayer", cc.load("mvc").ViewBase)
 
+gameLayerInstance = nil
+
 function gameLayer:onCreate()
+    gameLayerInstance = self
     -- add background image
     display.newSprite("HelloWorld.png")
         :move(display.center)
@@ -18,7 +21,7 @@ function gameLayer:onCreate()
     display.loadSpriteFrames("mariaObj.plist","mariaObj.png")
     display.loadSpriteFrames("control.plist","control.png")
 
-    self.m_map = mariaMap.new("tmx/mary2.tmx")
+    self.m_map = mariaMap.new("tmx/mary3.tmx")
                     :addTo(self,0,0)
                     -- :move(-200,0)
 
@@ -135,6 +138,7 @@ function gameLayer:onEnter()
 end
 
 function gameLayer:onExit()
+    gameLayerInstance = nil
     display.removeSpriteFrame("mariaObj.plist")
     display.removeSpriteFrame("control.plist")
 end

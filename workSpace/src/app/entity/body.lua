@@ -1,3 +1,6 @@
+--玛丽、和蘑菇、乌龟等生命体的父类
+--包含碰撞、移动等基本方法
+
 local body = class("body",function ( ... )
 	local node = display.newNode()
 	node:enableNodeEvents()
@@ -90,14 +93,7 @@ function body:setPramas(pramaType,value)
 end
 
 function body:getMap()
-	local name = self.__cname
-	local _map = nil
-	if self:bIsMaria() then
-		_map = self:getParent().m_map
-	else
-		_map = self:getParent()
-	end
-
+	_map = gameLayerInstance.m_map
 	return _map
 end
 
@@ -114,14 +110,17 @@ function body:isColliSionTile(tilePt)
 	local _map = self:getMap()
 	local _type = _map:tileTypeforPos(tilePt)		--得到块类型
 	
-	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Object_image or gggggg or _type==TileType.eTile_Bounder then		--如果阻止前进的东西，则先返回
+	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Bounder or _type == TileType.eTile_Object then		--如果阻止前进的东西，则先返回
 		return true
 	end
+
+
 
 	return false
 end
 
-function body:ctor( ... )
+function body:ctor(objectTab)
+	self._obj = objectTab
 	self._spr = display.newSprite()
 					:align(display.CENTER_BOTTOM,0,0)
 	self:addChild(self._spr,0,0)
@@ -131,6 +130,13 @@ function body:ctor( ... )
 	self.isJumpOver = false						--是否跳跃完毕
 	self:changeDirection(H_DirectionType.right)
 	
+	if objectTab then
+		local _map = self:getMap()
+		local _pos = _map:positionToTileCoord(cc.p(self._obj.x,self._obj.y))
+		_pos = _map:tilecoordToPosition(_pos)
+		_pos.x = _pos.x + _map.tileSize.width/2
+		self:setPosition(_pos)
+	end
 
 end
 
@@ -402,6 +408,8 @@ function body:ifCollistionV(bValue)
 	end
 	pt_3 = cc.p((pt_1.x+pt_2.x)/2,(pt_1.y+pt_2.y)/2)
 
+
+
 	pt_1 = _map:positionToTileCoord(pt_1,{x=1,y = _y})										  --得到玛丽在地图上的块坐标
 	pt_2 = _map:positionToTileCoord(pt_2,{x=-1,y = _y})
 	pt_3 = _map:positionToTileCoord(pt_3,{x = _x})
@@ -543,17 +551,10 @@ end
 function body:bIsInScreen()
 	local pt = cc.p(0,0)
 	pt = self._spr:convertToWorldSpace(pt)
-	-- local _map = self:getMap()
-	-- local _mapPtX = _map:getPositionX()
-	-- local _mapPtY = _map:getPositionY()
-	-- pt.x = pt.x + _mapPtX
-	-- pt.y = pt.y + _mapPtY
-	local offSet = 50
+
+	local offSet = 100
 	local ret = pt.x>-offSet and pt.x<display.width+offSet and pt.y>-offSet and pt.y<display.height+offSet
-	-- if not self:bIsMaria() then
-	-- 	print("pt:",pt.x,pt.y)
-	-- 	print("ret",ret)
-	-- end
+
 	return ret
 end
 
@@ -563,6 +564,7 @@ function body:ifCanAttack()
 end
 
 function body:checkIsHit()
+	--检测生命体之间的碰撞
 	if not self:ifCanAttack() or not self:bIsInScreen() then
 		return
 	end
@@ -606,63 +608,38 @@ function body:checkIsHit()
 			local x_speed_2 = v.m_speed
 			local y_speed_2 = v.m_vSpeed
 
-			local function _xxxx( tag )
-				-- if self:bIsMaria() then
-				-- 	print(tag,"==============---------",self:getPositionX(),self:getPositionY(),rect.width,rect.height)
-				-- 	print(" minX_1: "..minX_1.." minY_1: "..minY_1.." maxX_1: "..maxX_1.." maxY_1: "..maxY_1)
-				-- 	print(" minX_2: "..minX_2.." minY_2: "..minY_2.." maxX_2: "..maxX_2.." maxY_2: "..maxY_2)
-				-- 	-- cc.Director:getInstance():pause()
-				-- end
-			end
-			-- if self:bIsMaria() then
-			-- 	print("---------------------start")
-			-- 	print(minY_2>minY_1 and minY_2<maxY_1,minX_2>minX_1 and minX_2<maxX_1,maxX_2>minX_1 and maxX_2<maxX_1)
-			-- 	_xxxx()
-			-- 	print("-------------------------------end")
-			-- end
-			if minY_2>minY_1 and minY_2<maxY_1 and ((minX_2>minX_1 and minX_2<maxX_1) or (maxX_2>minX_1 and maxX_2<maxX_1) or (minX_2>minX_1 and maxX_2<maxX_1) or (minX_2<minX_1 and maxX_2>maxX_1)) then --与上边碰撞
+			if minY_2>minY_1 and minY_2<maxY_1 and ((minX_2>=minX_1 and minX_2<=maxX_1) or (maxX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2<=minX_1 and maxX_2>=maxX_1)) then --与上边碰撞
 				
 				if y_speed_1>0 or y_speed_2<0 then
 					self:isHited(v,1)
 					v:isHited(self,2)
-					_xxxx(1)
 					return
 				end
 			end
-			if maxY_2>minY_1 and maxY_2<maxY_1 and ((minX_2>minX_1 and minX_2<maxX_1) or (maxX_2>minX_1 and maxX_2<maxX_1) or (minX_2>minX_1 and maxX_2<maxX_1) or (minX_2<minX_1 and maxX_2>maxX_1)) then --与下边碰撞
+			if maxY_2>minY_1 and maxY_2<maxY_1 and ((minX_2>=minX_1 and minX_2<=maxX_1) or (maxX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2<=minX_1 and maxX_2>=maxX_1)) then --与下边碰撞
 				if y_speed_1<0 or y_speed_2>0 then
 					self:isHited(v,2)
 					v:isHited(self,1)
-					_xxxx(2)
 					return
 				end
 			end
 			
-			if maxX_2>minX_1 and maxX_2<maxX_1 and ((minY_2>minY_1 and minY_2<maxY_1) or (maxY_2>minY_1 and maxY_2<maxY_1) or (minY_2>minY_1 and maxY_2<maxY_1) or (minY_2<minY_1 and maxY_2>maxY_1)) then --与左边碰撞
-				-- print("x_speed_1:",x_speed_1,"x_speed_2:",x_speed_2)
+			if maxX_2>minX_1 and maxX_2<maxX_1 and ((minY_2>=minY_1 and minY_2<=maxY_1) or (maxY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2<=minY_1 and maxY_2>=maxY_1)) then --与左边碰撞
 				if x_speed_1<0 or x_speed_2>0 then
 					self:isHited(v,3)
 					v:isHited(self,4)
-					_xxxx(3)
 					return
 				end
 			end
-			if minX_2>minX_1 and minX_2<maxX_1 and ((minY_2>minY_1 and minY_2<maxY_1) or (maxY_2>minY_1 and maxY_2<maxY_1) or (minY_2>minY_1 and maxY_2<maxY_1) or (minY_2<minY_1 and maxY_2>maxY_1)) then --与右边碰撞
+			if minX_2>minX_1 and minX_2<maxX_1 and ((minY_2>=minY_1 and minY_2<=maxY_1) or (maxY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2<=minY_1 and maxY_2>=maxY_1)) then --与右边碰撞
 				if x_speed_1>0 or x_speed_2<0 then
 					self:isHited(v,4)
 					v:isHited(self,3)
-					_xxxx(4)
 					return
 				end
 			end
 
 			if cc.rectContainsPoint(rect,minPt) then --因为速度太快而被包进去，无法判断方向的时候
-				if self:bIsMaria() then
-					-- print("------------------------")
-					-- printTable(rect)
-					-- print("\n")
-					-- printTable(minPt)
-				end
 				self:isHited(v,0)
 				return
 			end

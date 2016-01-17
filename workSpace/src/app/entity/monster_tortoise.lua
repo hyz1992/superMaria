@@ -3,13 +3,9 @@ local body = require("app.entity.body")
 local monster_tortoise = class("monster_tortoise",body)
 
 function monster_tortoise:ctor(objectTab)
-	monster_tortoise.super.ctor(self)
-	self._obj = objectTab
+	monster_tortoise.super.ctor(self,objectTab)
 	self._spr:setSpriteFrame("img_67.png")
 	self._spr:align(display.CENTER_BOTTOM,self:getContentSize().width/2,0)
-
-	local _pos = cc.p(objectTab.x+8,objectTab.y-8)
-	self:setPosition(_pos)
 
 	self:addStateMachine()
 
@@ -141,7 +137,12 @@ function monster_tortoise:isHited(body,direction)
 				self:goDead(2,direction)
 			end
 		end
-		
+	else
+		if self.m_fsm:getState()== "walkLeft" then
+			self:doEvent("goWalkRight")
+		elseif self.m_fsm:getState()== "walkRight" then
+			self:doEvent("goWalkLeft")
+		end	
 	end
 end
 
@@ -165,17 +166,17 @@ function monster_tortoise:goDead(tag,prama)
 		self.isVertigo = true
 		self:doEvent("goStanding")
 	elseif tag==2 then
-		print("prama: ",prama)
 		if not self.slide then	--	没有在滑行，才能开始滑行
 			self:changeSpeed(1)
 			if prama==3 then
-				print("向左")
 				self:doEvent("goWalkRight")
 			else
-				print("向右")
 				self:doEvent("goWalkLeft")
 			end
 			self.slide = true
+		else
+			self:doEvent("goStanding")
+			self.slide = false
 		end
 	elseif tag==3 then
 		self:clearSelf()

@@ -3,13 +3,9 @@ local body = require("app.entity.body")
 local monster_mushroom = class("monster_mushroom",body)
 
 function monster_mushroom:ctor(objectTab)
-	monster_mushroom.super.ctor(self)
-	self._obj = objectTab
+	monster_mushroom.super.ctor(self,objectTab)
 	self._spr:setSpriteFrame("img_33.png")
 	self._spr:align(display.CENTER_BOTTOM,self:getContentSize().width/2,0)
-	
-	local _pos = cc.p(objectTab.x+8,objectTab.y-8+200)
-	self:setPosition(_pos)
 
 	self:addStateMachine()
 
@@ -139,12 +135,18 @@ function monster_mushroom:isHited(body,direction)
 	monster_mushroom.super.isHited(self,body,direction)
 	if body:bIsMaria() and direction ==1 then
 		self:goDead(1)
+	elseif body.__cname=="monster_tortoise" then
+		local prama = 3
+		if body:getPositionX()>self:getPositionX() then
+			prama = 4
+		end
+		self:goDead(2,prama)
 	end
 end
 
 --tag标志,1:被踩死,2:被子弹打死
-function monster_mushroom:goDead(tag)
-	if tag==1 then
+function monster_mushroom:goDead(tag,prama)
+	if tag == 1 then
 		self:clearSelf()
 		self:setScaleY(0.5)
 		local fadeTime = 1
@@ -152,6 +154,22 @@ function monster_mushroom:goDead(tag)
 			self:removeSelf()
 		end)}
 		self._spr:runAction(cc.FadeOut:create(fadeTime))
+		self:runAction(sq)
+	elseif tag == 2 then
+		local pt = self:getPtRightTop()
+		pt = self:convertToWorldSpace(pt)
+		pt.y = -pt.y-100
+		pt.x = pt.y+100
+		if prama == 3 then
+			pt.x = -1 * pt.x
+		end
+		self:clearSelf()
+
+		local speed = 400
+		local fadeTime = -pt.y/speed
+		local sq = transition.sequence{cc.MoveBy:create(fadeTime,pt),cc.CallFunc:create(function ()
+			self:removeSelf()
+		end)}
 		self:runAction(sq)
 	end
 end

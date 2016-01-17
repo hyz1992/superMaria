@@ -14,9 +14,6 @@ OldCommond.walkRight = 2
 
 local isJumpBtnDown = false  --跳跃按钮是否被按下
 
-local gggggg = false
-
-
 function mariaAI:ctor(...)
 	mariaAI.super.ctor(self,...)
 	display.loadSpriteFrames("mario.plist","mario.png")
@@ -36,16 +33,19 @@ end
 
 function mariaAI:playAni(_type)
 	if _type~=nil then
-		self.m_curMariaType = _type
+		self.m_curMariaAniType = _type
 	else
-		_type = self.m_curMariaType
+		_type = self.m_curMariaAniType
 	end
-	self._spr:stopAllActions()
+	
+	self._spr:stopActionByTag(1)
 	if self.m_mariaType == MariaType.small then
 		if aniType.walk == _type then
 			local animation = display.newAnimation("mario_1_%d.png",0,2,false,0.2)
 			local ani = cc.Animate:create(animation)
-			self._spr:runAction(cc.RepeatForever:create(ani))
+			ani = cc.RepeatForever:create(ani)
+			ani:setTag(1)
+			self._spr:runAction(ani)
 		elseif aniType.jump == _type then
 			self._spr:setSpriteFrame("mario_1_2.png")
 		elseif aniType.standing == _type then
@@ -57,7 +57,9 @@ function mariaAI:playAni(_type)
 		if aniType.walk == _type then
 			local animation = display.newAnimation("mario_2_%d.png",0,2,false,0.2)
 			local ani = cc.Animate:create(animation)
-			self._spr:runAction(cc.RepeatForever:create(ani))
+			ani = cc.RepeatForever:create(ani)
+			ani:setTag(1)
+			self._spr:runAction(ani)
 		elseif aniType.jump == _type then
 			self._spr:setSpriteFrame("mario_2_2.png")
 		elseif aniType.standing == _type then
@@ -69,7 +71,9 @@ function mariaAI:playAni(_type)
 		if aniType.walk == _type then
 			local animation = display.newAnimation("mario_3_%d.png",0,2,false,0.15)
 			local ani = cc.Animate:create(animation)
-			self._spr:runAction(cc.RepeatForever:create(ani))
+			ani = cc.RepeatForever:create(ani)
+			ani:setTag(1)
+			self._spr:runAction(ani)
 		elseif aniType.jump == _type then
 			self._spr:setSpriteFrame("mario_3_2.png")
 		elseif aniType.standing == _type then
@@ -314,7 +318,7 @@ function mariaAI:isHited(body,direction)
 	local name = body.__cname
 	if name== "monster_mushroom" then
 		if direction==2 then
-			self.m_vSpeed = -self.m_vSpeed/2
+			self.m_vSpeed = 5
 			if self.m_fsm:getState()=="jumpUp" then
 				self:doEvent("goJumpUp",false)
 			elseif self.m_fsm:getState()=="jumpLeft" then
@@ -327,7 +331,7 @@ function mariaAI:isHited(body,direction)
 		end
 	elseif name== "monster_tortoise" then
 		if direction==2 then
-			self.m_vSpeed = -self.m_vSpeed/2
+			self.m_vSpeed = 5---self.m_vSpeed/2
 			if self.m_fsm:getState()=="jumpUp" then
 				self:doEvent("goJumpUp",false)
 			elseif self.m_fsm:getState()=="jumpLeft" then
@@ -346,14 +350,68 @@ end
 --2:掉进陷阱，一命呜呼				
 function mariaAI:goDead(tag)
 	if tag==1 then
-		self.m_mariaType = MariaType.big
-		self:playAni()
+		if self.isDeading then
+			return
+		end
+		
+		local function _action_1()
+			self.m_mariaType = self.m_mariaType - 1
+			if self.m_mariaType == 0 then
+				self.m_mariaType = 3
+			end
+			self:playAni()
+		end
+
+		local function _action_2()
+			self.m_mariaType = self.m_mariaType + 1
+			if self.m_mariaType == 4 then
+				self.m_mariaType = 1
+			end
+			self:playAni()
+		end
+
+		local function _changeType(prams)
+			self.m_mariaType = self.m_mariaType - 1
+			if self.m_mariaType == 0 then
+				--挂
+				self.m_mariaType = MariaType.fire
+			end
+			self.isDeading = false
+			self:playAni()
+		end
+		local fadeTime = 0.1
+		local repeatTime = 5
+		local sq = transition.sequence{
+						
+						cc.Repeat:create(transition.sequence{
+								cc.CallFunc:create(_action_1),
+								cc.DelayTime:create(fadeTime*4),
+								cc.CallFunc:create(_action_2),
+								cc.DelayTime:create(fadeTime),
+							},repeatTime),
+						cc.CallFunc:create(_changeType),
+					}
+		self.isDeading = true
+		sq:setTag(2)
+		self._spr:setOpacity(50)
+		self._spr:runAction(cc.FadeIn:create(fadeTime*repeatTime))
+		self._spr:runAction(sq)
 	end
 end
 
 --是否为可以攻击其他物种的状态
 function mariaAI:ifCanAttack()
 	return true
+end
+
+function mariaAI:checkIsHit( ... )
+	mariaAI.super.checkIsHit(self)
+	--检测与金币或砖块等对象的碰撞
+	if self:bIsMaria() then
+		for k,v in pairs(allObjectList) do
+			
+		end
+	end
 end
 
 return mariaAI
