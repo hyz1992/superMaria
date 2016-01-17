@@ -10,4 +10,9 @@ function coin:ctor(objectTab)
 
 end
 
+function coin:isHited()
+	coin.super:isHited(self)
+
+end
+
 return coin

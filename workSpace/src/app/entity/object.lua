@@ -37,7 +37,8 @@ function object:bIsInScreen()
 end
 
 function object:onEnter()
-	table.insert(allObjectList,self)
+	local key = "x"..self.tileCoord.x.."y"..self.tileCoord.y
+	allObjectList[key] = self
 end
 
 function object:clearSelf()
@@ -52,20 +53,8 @@ function object:onExit()
 	
 end
 
---判断自身是否与目标点相交
-function object:ifContainPoint(pt)
-	local _map = self:getMap()
-	local myRect = cc.rect(self._obj.x-self._obj.width/2,self._obj.y-self._obj.height/2,self._obj.width,self._obj.height)
-	-- myRect.y = _map.mapSize.height * _map.tileSize.height - myRect.y
-	local ret = cc.rectContainsPoint(myRect,pt)
-	-- if ret then
-		print("--pt",pt.x,pt.y)
-		print("myRect",myRect.x,myRect.y)
-	-- end
-	print("ret",ret)
-	return ret
+function object:isHited()
+	-- body
 end
-
-
 
 return object

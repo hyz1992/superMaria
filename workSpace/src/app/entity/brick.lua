@@ -9,4 +9,14 @@ function brick:ctor(objectTab)
 	
 end
 
+function brick:isHited()
+	brick.super:isHited(self)
+	self:goDead()
+end
+
+function brick:goDead()
+	self:clearSelf()
+	
+end
+
 return brick

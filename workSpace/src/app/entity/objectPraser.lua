@@ -18,7 +18,7 @@ function parseTiledObject(objectTab)
 		ret = createObject(objectTab)
 	elseif name == "Brick" then			--箱子
 		ret = createObject(objectTab)
-		if ret._obj.x ~= 360 then
+		if ret._obj.x ~= 200 then
 			-- ret = nil
 		end
 	elseif name == "DisPenser" then		--起点

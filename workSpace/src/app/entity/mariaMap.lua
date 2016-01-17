@@ -99,7 +99,7 @@ function mariaMap:tileTypeforPos(tileCoord)
 
 	for k,v in pairs(allObjectList) do
 		local _name = v.__cname
-		if _name=="brick" or _name=="brickCoin" then
+		if _name=="brick" or _name=="brickCoin" or _name=="coin" then
 			if v.tileCoord.x==tileCoord.x and v.tileCoord.y==tileCoord.y then
 				return TileType.eTile_Object
 			end

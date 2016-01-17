@@ -10,4 +10,8 @@ function brickCoin:ctor(objectTab)
 	
 end
 
+function brickCoin:isHited()
+	brickCoin.super:isHited(self)
+end
+
 return brickCoin

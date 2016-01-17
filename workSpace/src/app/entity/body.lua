@@ -106,15 +106,45 @@ function body:bIsMaria()
 	end
 end
 
+function body:checkObjectCollision(tilePt)
+	if not self:bIsMaria() then
+		return false
+	end
+	local tmpKey = "x"..tilePt.x.."y"..tilePt.y
+	local obj = allObjectList[tmpKey]
+	
+	local _name = nil
+	if obj then
+		_name = obj.__cname
+	else
+		return false
+	end
+	if _name=="brick" or _name=="brickCoin" then
+		if self.m_vSpeed~=0 then
+		print("self.m_vSpeed",self.m_vSpeed)
+		end
+		if self.m_vSpeed>0 and self.m_vSpeed~=self.MAX_V_SPEED then
+			obj:isHited()
+		end
+		return true
+	elseif _name=="coin" then
+		obj:isHited()
+	end
+
+	return false
+end
+
 function body:isColliSionTile(tilePt)
 	local _map = self:getMap()
 	local _type = _map:tileTypeforPos(tilePt)		--得到块类型
 	
-	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Bounder or _type == TileType.eTile_Object then		--如果阻止前进的东西，则先返回
+	if _type == TileType.eTile_Object and self:checkObjectCollision(tilePt) then
 		return true
 	end
 
-
+	if _type==TileType.eTile_Barrier or _type==TileType.eTile_Bounder then		--如果阻止前进的东西，则先返回
+		return true
+	end
 
 	return false
 end
