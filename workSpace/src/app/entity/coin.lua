@@ -12,7 +12,12 @@ end
 
 function coin:isHited()
 	coin.super:isHited(self)
+	self:goDead()
+end
 
+function coin:goDead()
+	self:clearSelf()
+	self:removeSelf()
 end
 
 return coin

@@ -106,10 +106,8 @@ function body:bIsMaria()
 	end
 end
 
-function body:checkObjectCollision(tilePt)
-	if not self:bIsMaria() then
-		return false
-	end
+function body:checkObjectCollision(tilePt,isV)
+	
 	local tmpKey = "x"..tilePt.x.."y"..tilePt.y
 	local obj = allObjectList[tmpKey]
 	
@@ -120,25 +118,24 @@ function body:checkObjectCollision(tilePt)
 		return false
 	end
 	if _name=="brick" or _name=="brickCoin" then
-		if self.m_vSpeed~=0 then
-		print("self.m_vSpeed",self.m_vSpeed)
-		end
-		if self.m_vSpeed>0 and self.m_vSpeed~=self.MAX_V_SPEED then
+		if self:bIsMaria() and isV and self.m_vSpeed>0 and self.m_vSpeed~=self.MAX_V_SPEED then
 			obj:isHited()
 		end
 		return true
 	elseif _name=="coin" then
-		obj:isHited()
+		if self:bIsMaria() then
+			obj:isHited()
+		end
 	end
 
 	return false
 end
 
-function body:isColliSionTile(tilePt)
+function body:isColliSionTile(tilePt,isV)
 	local _map = self:getMap()
 	local _type = _map:tileTypeforPos(tilePt)		--得到块类型
 	
-	if _type == TileType.eTile_Object and self:checkObjectCollision(tilePt) then
+	if _type == TileType.eTile_Object and self:checkObjectCollision(tilePt,isV) then
 		return true
 	end
 
@@ -444,13 +441,13 @@ function body:ifCollistionV(bValue)
 	pt_2 = _map:positionToTileCoord(pt_2,{x=-1,y = _y})
 	pt_3 = _map:positionToTileCoord(pt_3,{x = _x})
 
-	if self:isColliSionTile(pt_1) then
+	if self:isColliSionTile(pt_1,true) then
 		return true,pt_1
 	end
-	if self:isColliSionTile(pt_2) then
+	if self:isColliSionTile(pt_2,true) then
 		return true,pt_2
 	end
-	if self:isColliSionTile(pt_3) then
+	if self:isColliSionTile(pt_3,true) then
 		return true,pt_3
 	end
 	return false
