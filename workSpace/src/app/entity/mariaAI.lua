@@ -23,7 +23,7 @@ function mariaAI:ctor(...)
 	self.m_mariaType = MariaType.fire			--当前玛丽的类型
 
     self:addStateMachine()
-    
+    self.canAttack = true
 end
 
 function mariaAI:onExit()
@@ -353,7 +353,7 @@ function mariaAI:goDead(tag)
 		if self.isDeading then
 			return
 		end
-		
+		self.canAttack = false
 		local function _action_1()
 			self.m_mariaType = self.m_mariaType - 1
 			if self.m_mariaType == 0 then
@@ -378,6 +378,7 @@ function mariaAI:goDead(tag)
 			end
 			self.isDeading = false
 			self:playAni()
+			self.canAttack = true
 		end
 		local fadeTime = 0.1
 		local repeatTime = 5
@@ -401,7 +402,7 @@ end
 
 --是否为可以攻击其他物种的状态
 function mariaAI:ifCanAttack()
-	return true
+	return self.canAttack
 end
 
 function mariaAI:checkIsHit( ... )

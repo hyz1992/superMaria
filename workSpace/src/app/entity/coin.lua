@@ -6,8 +6,10 @@ local coin = class("coin",object)
 function coin:ctor(objectTab)
 	coin.super.ctor(self,objectTab)
 	self._obj = objectTab
-	self._spr:setSpriteFrame("img_07.png")
-
+	self._spr:setSpriteFrame("img_25.png")
+	local animation = display.newAnimation("img_%02d.png",25,3,false,1/3)
+	local ani = cc.Animate:create(animation)
+	self._spr:runAction(cc.RepeatForever:create(ani))
 end
 
 function coin:isHited()

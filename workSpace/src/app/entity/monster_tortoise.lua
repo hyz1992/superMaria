@@ -18,7 +18,6 @@ function monster_tortoise:update()
 	end
 	monster_tortoise.super.update(self)
 	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
-	-- print("state: ",self.m_fsm:getState(),"_bIsCollision: ",_bIsCollision,"self.isJumpOver: ",self.isJumpOver)
 	if not _bIsCollision then
 		if self.m_fsm:getState() == "walkLeft" then
 			self:doEvent("goJumpLeft")
@@ -32,13 +31,19 @@ function monster_tortoise:update()
 	if self.m_fsm:getState() == "standing" then
         return
     elseif self.m_fsm:getState() == "walkLeft" then
+    	local _ptX = self:getPositionX()
+    	self:moveH()
     	_bIsCollision = self:ifCollistionH()
+    	self:setPositionX(_ptX)
     	if _bIsCollision then
     		self:doEvent("goWalkRight")
     	end
     	self:moveH()
     elseif self.m_fsm:getState() == "walkRight" then
+    	local _ptX = self:getPositionX()
+    	self:moveH()
     	_bIsCollision = self:ifCollistionH()
+    	self:setPositionX(_ptX)
     	if _bIsCollision then
     		self:doEvent("goWalkLeft")
     	end
@@ -71,8 +76,8 @@ function monster_tortoise:addStateMachine()
         -- 事件和状态转换
         events = {
         	{name = "goStanding",  from = {"standing","walkLeft","walkRight","jumpLeft","jumpRight"}, to = "standing" },
-        	{name = "goWalkLeft",  from = {"standing","walkRight","jumpLeft"}, to = "walkLeft" },
-        	{name = "goWalkRight",  from = {"standing","walkLeft","jumpRight"}, to = "walkRight" },
+        	{name = "goWalkLeft",  from = {"standing","walkRight","jumpLeft","walkLeft"}, to = "walkLeft" },
+        	{name = "goWalkRight",  from = {"standing","walkLeft","jumpRight","walkRight"}, to = "walkRight" },
         	{name = "goJumpLeft",  from = {"walkLeft"}, to = "jumpLeft" },
         	{name = "goJumpRight",  from = {"walkRight"}, to = "jumpRight" },
     	},
@@ -134,7 +139,7 @@ function monster_tortoise:isHited(body,direction)
 			end
 		elseif direction==3 or direction==4 then
 			if self.isVertigo then
-				self:goDead(2,direction)
+				self:goDead(3,direction)
 			end
 		end
 	else
@@ -173,12 +178,22 @@ function monster_tortoise:goDead(tag,prama)
 			else
 				self:doEvent("goWalkLeft")
 			end
+			self:adjustOffsetX()
 			self.slide = true
 		else
 			self:doEvent("goStanding")
 			self.slide = false
 		end
 	elseif tag==3 then
+		self.slide = true
+		self:doEvent("goStanding")
+		if prama==3 then
+			self:doEvent("goWalkRight")
+		else
+			self:doEvent("goWalkLeft")
+		end
+		self:adjustOffsetX()
+	elseif tag==4 then
 		self:clearSelf()
 	end
 end

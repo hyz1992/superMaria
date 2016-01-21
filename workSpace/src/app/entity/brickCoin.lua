@@ -7,7 +7,9 @@ function brickCoin:ctor(objectTab)
 	brickCoin.super.ctor(self,objectTab)
 	self._obj = objectTab
 	self._spr:setSpriteFrame("img_03.png")
-	
+	local animation = display.newAnimation("img_%02d.png",1,3,false,1/3)
+	local ani = cc.Animate:create(animation)
+	self._spr:runAction(cc.RepeatForever:create(ani))
 end
 
 function brickCoin:isHited()
@@ -24,6 +26,7 @@ function brickCoin:goDead()
 					cc.MoveBy:create(0.05,cc.p(0,-10)),
 					cc.CallFunc:create(function ( ... )
 						self.isRuning = false
+						self._spr:stopAllActions()
 						self._spr:setSpriteFrame("img_09.png")
 					end),
 					cc.CallFunc:create(function ( ... )
