@@ -18,6 +18,7 @@ function monster_tortoise:update()
 	end
 	monster_tortoise.super.update(self)
 	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
+	-- print("state: ",self.m_fsm:getState(),"_bIsCollision: ",self:ifCollistionH())
 	if not _bIsCollision then
 		if self.m_fsm:getState() == "walkLeft" then
 			self:doEvent("goJumpLeft")
@@ -139,7 +140,15 @@ function monster_tortoise:isHited(body,direction)
 			end
 		elseif direction==3 or direction==4 then
 			if self.isVertigo then
-				self:goDead(3,direction)
+				if not self.slide then
+					self:goDead(2,direction)
+				else
+					if direction==3 then
+						self:doEvent("goWalkRight")
+					elseif direction==4 then
+						self:doEvent("goWalkLeft")
+					end	
+				end
 			end
 		end
 	else
@@ -165,7 +174,7 @@ function monster_tortoise:changeSpeed(tag)
 	self:setPramas("acc_h",new_acc_h)
 end
 
---tag标志。1:被踩了第一脚，变成龟壳；2:被踩第二脚；3:被子弹打死
+--tag标志。1:被踩了第一脚，变成龟壳；2:被踩第二脚；3:被水平方向被玛丽碰到，4:被子弹打死
 function monster_tortoise:goDead(tag,prama)
 	if tag==1 then
 		self.isVertigo = true
@@ -178,21 +187,11 @@ function monster_tortoise:goDead(tag,prama)
 			else
 				self:doEvent("goWalkLeft")
 			end
-			self:adjustOffsetX()
 			self.slide = true
 		else
 			self:doEvent("goStanding")
 			self.slide = false
 		end
-	elseif tag==3 then
-		self.slide = true
-		self:doEvent("goStanding")
-		if prama==3 then
-			self:doEvent("goWalkRight")
-		else
-			self:doEvent("goWalkLeft")
-		end
-		self:adjustOffsetX()
 	elseif tag==4 then
 		self:clearSelf()
 	end

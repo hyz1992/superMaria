@@ -23,7 +23,7 @@ function mariaAI:ctor(...)
 	self.m_mariaType = MariaType.fire			--当前玛丽的类型
 
     self:addStateMachine()
-    self.canAttack = true
+    
 end
 
 function mariaAI:onExit()
@@ -318,6 +318,7 @@ function mariaAI:isHited(body,direction)
 	local name = body.__cname
 	if name== "monster_mushroom" then
 		if direction==2 then
+			print("---------------踩蘑菇")
 			self.m_vSpeed = 5
 			if self.m_fsm:getState()=="jumpUp" then
 				self:doEvent("goJumpUp",false)
@@ -327,10 +328,12 @@ function mariaAI:isHited(body,direction)
 				self:doEvent("goJumpRight",false)
 			end
 		elseif direction==1 or direction==3 or direction==4 then
+			print("---------------被蘑菇撞",direction)
 			self:goDead(1)
 		end
 	elseif name== "monster_tortoise" then
 		if direction==2 then
+			print("---------------踩乌龟")
 			self.m_vSpeed = 5---self.m_vSpeed/2
 			if self.m_fsm:getState()=="jumpUp" then
 				self:doEvent("goJumpUp",false)
@@ -340,6 +343,7 @@ function mariaAI:isHited(body,direction)
 				self:doEvent("goJumpRight",false)
 			end
 		elseif direction==1 or direction==3 or direction==4 then
+			print("---------------被乌龟撞",direction)
 			self:goDead(1)
 		end
 	end
@@ -349,11 +353,12 @@ end
 --1:被怪物碰到，掉一滴血
 --2:掉进陷阱，一命呜呼				
 function mariaAI:goDead(tag)
+	print("tag",tag)
 	if tag==1 then
 		if self.isDeading then
 			return
 		end
-		self.canAttack = false
+		
 		local function _action_1()
 			self.m_mariaType = self.m_mariaType - 1
 			if self.m_mariaType == 0 then
@@ -378,7 +383,6 @@ function mariaAI:goDead(tag)
 			end
 			self.isDeading = false
 			self:playAni()
-			self.canAttack = true
 		end
 		local fadeTime = 0.1
 		local repeatTime = 5
@@ -402,7 +406,7 @@ end
 
 --是否为可以攻击其他物种的状态
 function mariaAI:ifCanAttack()
-	return self.canAttack
+	return true
 end
 
 function mariaAI:checkIsHit( ... )
