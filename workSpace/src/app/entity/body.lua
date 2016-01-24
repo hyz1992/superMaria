@@ -636,32 +636,39 @@ function body:checkIsHit()
 			local y_speed_2 = v.m_vSpeed
 
 			if minY_2>minY_1 and minY_2<maxY_1 and ((minX_2>=minX_1 and minX_2<=maxX_1) or (maxX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2<=minX_1 and maxX_2>=maxX_1)) then --与上边碰撞
-				
-				if y_speed_1>0 or y_speed_2<0 then
+				if y_speed_1-y_speed_2>0 then
 					self:isHited(v,1)
-					v:isHited(self,2)
+					if not v:ifCanAttack() then
+						v:isHited(self,2)
+					end
 					return
 				end
 			end
 			if maxY_2>minY_1 and maxY_2<maxY_1 and ((minX_2>=minX_1 and minX_2<=maxX_1) or (maxX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2>=minX_1 and maxX_2<=maxX_1) or (minX_2<=minX_1 and maxX_2>=maxX_1)) then --与下边碰撞
-				if y_speed_1<0 or y_speed_2>0 then
+				if y_speed_1-y_speed_2<0 then
 					self:isHited(v,2)
-					v:isHited(self,1)
+					if not v:ifCanAttack() then
+						v:isHited(self,1)
+					end
 					return
 				end
 			end
 			
 			if maxX_2>minX_1 and maxX_2<maxX_1 and ((minY_2>=minY_1 and minY_2<=maxY_1) or (maxY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2<=minY_1 and maxY_2>=maxY_1)) then --与左边碰撞
-				if x_speed_1<0 or x_speed_2>0 then
+				if x_speed_1-x_speed_2<0 then
 					self:isHited(v,3)
-					v:isHited(self,4)
+					if not v:ifCanAttack() then
+						v:isHited(self,4)
+					end
 					return
 				end
 			end
 			if minX_2>minX_1 and minX_2<maxX_1 and ((minY_2>=minY_1 and minY_2<=maxY_1) or (maxY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2>=minY_1 and maxY_2<=maxY_1) or (minY_2<=minY_1 and maxY_2>=maxY_1)) then --与右边碰撞
-				if x_speed_1>0 or x_speed_2<0 then
+				if x_speed_1-x_speed_2>0 then
 					self:isHited(v,4)
-					v:isHited(self,3)
+					if not v:ifCanAttack() then
+						v:isHited(self,3)
+					end
 					return
 				end
 			end

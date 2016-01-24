@@ -333,7 +333,7 @@ function mariaAI:isHited(body,direction)
 		end
 	elseif name== "monster_tortoise" then
 		if direction==2 then
-			print("---------------踩乌龟")
+			-- print("---------------踩乌龟")
 			self.m_vSpeed = 5---self.m_vSpeed/2
 			if self.m_fsm:getState()=="jumpUp" then
 				self:doEvent("goJumpUp",false)
@@ -343,7 +343,7 @@ function mariaAI:isHited(body,direction)
 				self:doEvent("goJumpRight",false)
 			end
 		elseif direction==1 or direction==3 or direction==4 then
-			print("---------------被乌龟撞",direction)
+			-- print("---------------被乌龟撞",direction)
 			self:goDead(1)
 		end
 	end
@@ -353,7 +353,7 @@ end
 --1:被怪物碰到，掉一滴血
 --2:掉进陷阱，一命呜呼				
 function mariaAI:goDead(tag)
-	print("tag",tag)
+	-- print("tag",tag)
 	if tag==1 then
 		if self.isDeading then
 			return
