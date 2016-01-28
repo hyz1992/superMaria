@@ -411,12 +411,6 @@ end
 
 function mariaAI:checkIsHit( ... )
 	mariaAI.super.checkIsHit(self)
-	--检测与金币或砖块等对象的碰撞
-	if self:bIsMaria() then
-		for k,v in pairs(allObjectList) do
-			
-		end
-	end
 end
 
 return mariaAI

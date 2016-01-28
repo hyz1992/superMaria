@@ -18,8 +18,9 @@ function monster_tortoise:update()
 	end
 	monster_tortoise.super.update(self)
 	local _bIsCollision,_tilePt = self:ifCollistionV(-1)	--随时监测竖直方向上是否有掉下去的趋势
-	-- print("state: ",self.m_fsm:getState(),"_bIsCollision: ",self:ifCollistionH())
+	-- print("state: ",self.m_fsm:getState(),"_bIsCollision: ",_bIsCollision)
 	if not _bIsCollision then
+		print("掉下去")
 		if self.m_fsm:getState() == "walkLeft" then
 			self:doEvent("goJumpLeft")
 			self:moveV()--为了使其立马掉下去，不至于因为水平速速过快而跨国砖块间隙
@@ -180,6 +181,7 @@ function monster_tortoise:goDead(tag,prama)
 		self.isVertigo = true
 		self:doEvent("goStanding")
 	elseif tag==2 then
+		print("self.slide:",self.slide)
 		if not self.slide then	--	没有在滑行，才能开始滑行
 			self:changeSpeed(1)
 			if prama==3 then
@@ -199,11 +201,15 @@ end
 
 --是否为可以攻击其他物种的状态
 function monster_tortoise:ifCanAttack()
-	if self.slide then
+	if self.isVertigo then
 		return true
 	else
 		return false
 	end
+end
+
+function monster_tortoise:checkIsHit( ... )
+	monster_tortoise.super.checkIsHit(self)
 end
 
 return monster_tortoise
